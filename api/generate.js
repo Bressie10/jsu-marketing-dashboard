@@ -1,7 +1,7 @@
 const MODELS = ['gemini-2.0-flash-lite', 'gemini-2.0-flash'];
 const BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const { prompt, task } = req.body;
