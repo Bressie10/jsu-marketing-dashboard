@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Hub | JSU Marketing</title>
+    <link rel="stylesheet" href="/CSS/sidebar.css">
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">J</div>
+                <span class="logo-text">JSU Marketing</span>
+            </div>
+            <button class="collapse-btn" id="collapseBtn" aria-label="Toggle sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="menu-section">
+            <h3 class="menu-title">Navigation</h3>
+            <ul class="menu-list">
+                <li class="menu-item active">
+                    <a href="/" class="menu-link" data-menu="dashboard" data-tooltip="Dashboard">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/content-hub/" class="menu-link" data-menu="content" data-tooltip="Content Hub">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span class="menu-text">Content Hub</span>
+                    </a>
+                </li>
+                                <li class="menu-item">
+                    <a href="/content-plan/" class="menu-link" data-menu="upload" data-tooltip="Bulk Upload">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <span class="menu-text">Content Plan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="/caption-generator/" class="menu-link" data-menu="ai" data-tooltip="AI Generator">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 8v4l3 3"></path>
+                        </svg>
+                        <span class="menu-text">AI Generator</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="/clients/" class="menu-link" data-menu="clients" data-tooltip="Clients">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span class="menu-text">Clients</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/analytics-dashboard/" class="menu-link" data-menu="analytics" data-tooltip="Analytics">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                        <span class="menu-text">Analytics</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/report-generator/" class="menu-link" data-menu="reports" data-tooltip="Reports">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                        <span class="menu-text">Reports</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+*{box-sizing:border-box}
+
+:root{
+  --gold:#FFD700;--gold-2:#FFC700;--gold-dim:rgba(255,215,0,.12);--gold-border:rgba(255,215,0,.28);
+  --bg-0:#060606;--bg-1:#0e0e0e;--bg-2:#171717;--bg-3:#222;--bg-card:#111;
+  --t1:#f0f0f0;--t2:#aaa;--t3:#666;--border:#252525;
+  --green:#4ade80;--blue:#38bdf8;--purple:#a78bfa;--amber:#fbbf24;--orange:#f97316;--slate:#9ca3af;
+  --red:#f87171;--sidebar-w:340px;
+}
+
+body{margin:0;font-family:'DM Sans',sans-serif;background:var(--bg-0);color:var(--t1);min-height:100vh}
+main{margin-left:var(--sidebar-w);min-height:100vh;transition:margin-left .3s ease}
+body.sidebar-collapsed main{margin-left:80px}
+.page{padding:36px 40px;max-width:1440px}
+
+.ph{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:28px}
+.ph h1{font-family:'Syne',sans-serif;font-size:32px;font-weight:700;margin:0 0 5px;letter-spacing:-.5px}
+.ph p{color:var(--t2);margin:0;font-size:14px}
+.ha{display:flex;gap:10px;align-items:center}
+
+.btn{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border-radius:8px;font-size:14px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;border:none;transition:all .2s;white-space:nowrap;text-decoration:none}
+.ghost{background:var(--bg-3);border:1px solid var(--border);color:var(--t1)}
+.ghost:hover{border-color:var(--gold-border);color:var(--gold);background:var(--gold-dim)}
+.gold{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#0a0a0a;font-weight:700;box-shadow:0 4px 16px rgba(255,215,0,.22)}
+.gold:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(255,215,0,.38)}
+.gold:active{transform:none}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none!important}
+
+.dbs{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--t3);margin-bottom:22px}
+.dbd{width:7px;height:7px;border-radius:50%;background:var(--green);animation:bl 2s ease-in-out infinite}
+.dbd.warn{background:var(--amber);animation:none}
+.dbd.err{background:var(--red);animation:none}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.3}}
+
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:20px;flex-wrap:wrap}
+.sw{position:relative;flex:1;min-width:240px;max-width:420px}
+.sw svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--t3);pointer-events:none}
+.si{width:100%;padding:10px 36px 10px 40px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--t1);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s}
+.si::placeholder{color:var(--t3)}
+.si:focus{border-color:var(--gold-border);box-shadow:0 0 0 3px rgba(255,215,0,.07)}
+.clr-btn{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--t3);cursor:pointer;font-size:17px;display:none;padding:2px 5px;border-radius:4px;line-height:1}
+.clr-btn:hover{color:var(--t1)}
+.si:not(:placeholder-shown)~.clr-btn{display:block}
+.sel{padding:10px 32px 10px 13px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--t1);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;cursor:pointer;appearance:none;min-width:130px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;transition:border-color .2s}
+.sel:focus{border-color:var(--gold-border)}
+.sel option{background:var(--bg-2)}
+.rc{margin-left:auto;font-size:13px;color:var(--t3);white-space:nowrap}
+.rc b{color:var(--gold)}
+
+.tabs{display:flex;gap:7px;margin-bottom:26px;flex-wrap:wrap}
+.tab{padding:6px 15px;border-radius:20px;font-size:13px;font-weight:500;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--t2);font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap}
+.tab:hover{border-color:var(--gold-border);color:var(--gold)}
+.tab.on{background:var(--gold);color:#0a0a0a;border-color:var(--gold);font-weight:700}
+.tc{display:inline-block;background:rgba(0,0,0,.2);border-radius:10px;padding:1px 6px;font-size:11px;margin-left:3px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:all .2s;position:relative}
+.card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:transparent;transition:background .25s}
+.card:hover{border-color:var(--gold-border);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.card:hover::after{background:linear-gradient(90deg,var(--gold),transparent)}
+
+.cthumb{width:100%;height:106px;background:var(--bg-2);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.cthumb-icon{color:var(--t3);opacity:.22}
+.has-file .cthumb{background:linear-gradient(135deg,#161616 0%,#1e1b10 100%)}
+.has-file .cthumb-icon{opacity:0}
+.vbadge{position:absolute;top:8px;right:8px;background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.3);border-radius:6px;padding:3px 8px;font-size:10px;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.5px;display:none}
+.has-file .vbadge{display:block}
+.szlbl{position:absolute;bottom:7px;left:8px;background:rgba(0,0,0,.65);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:11px;color:var(--t2);display:none;align-items:center;gap:5px}
+.has-file .szlbl{display:flex}
+.fthumb-name{position:absolute;bottom:7px;left:42px;font-size:11px;color:var(--t3);max-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:none}
+.has-file .fthumb-name{display:block}
+
+.cbody{padding:15px 17px}
+.ctop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.badge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
+.s-posted{background:rgba(74,222,128,.13);color:var(--green)}
+.s-scheduled{background:rgba(56,189,248,.13);color:var(--blue)}
+.s-edited{background:rgba(167,139,250,.13);color:var(--purple)}
+.s-created{background:rgba(251,191,36,.13);color:var(--amber)}
+.s-script{background:rgba(249,115,22,.13);color:var(--orange)}
+.s-idea{background:rgba(156,163,175,.13);color:var(--slate)}
+/* multi-platform toggles in modal */
+.plat-toggles{display:flex;gap:8px;flex-wrap:wrap}
+.plat-toggle{display:flex;align-items:center;gap:7px;padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--t2);font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;transition:all .2s;user-select:none}
+.plat-toggle:hover{border-color:var(--gold-border);color:var(--t1)}
+.plat-toggle.on{border-color:currentColor;background:rgba(255,255,255,.05)}
+.plat-toggle[data-p="TikTok"].on{color:#ff4060;border-color:#ff4060;background:rgba(255,64,96,.1)}
+.plat-toggle[data-p="Instagram"].on{color:#e1306c;border-color:#e1306c;background:rgba(225,48,108,.1)}
+.plat-toggle[data-p="Facebook"].on{color:#1877f2;border-color:#1877f2;background:rgba(24,119,242,.1)}
+.plat-toggle .pt-check{width:16px;height:16px;border-radius:4px;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s}
+.plat-toggle.on .pt-check{background:currentColor}
+.plat-toggle.on .pt-check::after{content:'✓';font-size:10px;color:#000;font-weight:700;line-height:1}
+
+/* platform pills on cards */
+.plat-pills{display:flex;gap:5px;flex-wrap:wrap}
+.ppill{font-size:10px;text-transform:uppercase;letter-spacing:.8px;font-weight:700;padding:2px 7px;border-radius:4px}
+.ppill-tiktok{color:#ff4060;background:rgba(255,64,96,.12)}
+.ppill-instagram{color:#e1306c;background:rgba(225,48,108,.12)}
+.ppill-facebook{color:#1877f2;background:rgba(24,119,242,.12)}
+.ctitle{font-family:'Syne',sans-serif;font-size:15px;font-weight:600;margin:0 0 4px;line-height:1.3}
+.cclient{font-size:13px;color:var(--t2);margin-bottom:12px}
+.cfoot{display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);gap:5px}
+.cdate{font-size:12px;color:var(--t3);display:flex;align-items:center;gap:5px}
+.cviews{font-size:13px;color:var(--t2)}
+.cviews b{color:var(--gold)}
+.cacts{display:flex;gap:2px;margin-left:auto}
+.ib{background:none;border:none;color:var(--t3);cursor:pointer;padding:5px;border-radius:6px;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.ib:hover{background:var(--bg-3);color:var(--t1)}
+.ib.dl:hover{color:var(--gold)}
+
+.sk{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;animation:pulse 1.4s ease-in-out infinite}
+.sk-th{width:100%;height:106px;background:var(--bg-2)}
+.sk-bd{padding:16px 18px}
+.sk-ln{background:var(--bg-3);border-radius:4px;margin-bottom:9px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.empty{grid-column:1/-1;text-align:center;padding:70px 40px;display:none}
+.empty.show{display:block}
+.ei{width:60px;height:60px;background:var(--gold-dim);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:var(--gold)}
+.empty h3{font-family:'Syne',sans-serif;font-size:19px;margin:0 0 7px}
+.empty p{color:var(--t3);font-size:14px;margin:0 0 22px}
+
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:9000;display:none;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(6px)}
+.overlay.open{display:flex}
+.modal{background:var(--bg-1);border:1px solid var(--border);border-radius:16px;width:100%;max-width:580px;max-height:93vh;overflow-y:auto;padding:28px;animation:min-in .2s ease}
+@keyframes min-in{from{transform:scale(.96) translateY(10px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+.mh{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.mh h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin:0}
+.mcl{background:var(--bg-3);border:none;color:var(--t2);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:19px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.mcl:hover{background:var(--bg-2);color:var(--t1)}
+.mft{display:flex;gap:10px;justify-content:flex-end;margin-top:24px;padding-top:18px;border-top:1px solid var(--border)}
+.fg{margin-bottom:16px}
+.fl{display:block;font-size:12px;font-weight:600;color:var(--t2);margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px}
+.fi,.fs,.ft{width:100%;padding:10px 13px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--t1);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:all .2s}
+.fs{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;padding-right:32px}
+.fs option{background:var(--bg-2)}
+.ft{min-height:75px;resize:vertical}
+.fi:focus,.fs:focus,.ft:focus{border-color:var(--gold-border);box-shadow:0 0 0 3px rgba(255,215,0,.07)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+
+/* Upload section */
+.upload-label{display:block;font-size:12px;font-weight:600;color:var(--t2);margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px}
+
+.ef-banner{display:none;align-items:center;gap:10px;background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.22);border-radius:9px;padding:11px 14px;margin-bottom:10px}
+.ef-banner.show{display:flex}
+.ef-banner svg{color:var(--green);flex-shrink:0}
+.ef-info{flex:1;min-width:0}
+.ef-name{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ef-sz{font-size:12px;color:var(--t3);margin-top:2px}
+.ef-rm{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.15);color:var(--red);border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:all .15s}
+.ef-rm:hover{background:rgba(248,113,113,.22)}
+
+.dzone{border:2px dashed var(--border);border-radius:10px;padding:24px 20px;text-align:center;cursor:pointer;transition:all .2s;position:relative;background:var(--bg-card)}
+.dzone:hover,.dzone.over{border-color:var(--gold-border);background:var(--gold-dim)}
+.dzone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.dzone-icon{color:var(--gold);margin-bottom:10px}
+.dzone h4{margin:0 0 4px;font-size:14px;font-weight:600;color:var(--t1)}
+.dzone p{margin:0;font-size:12px;color:var(--t3)}
+
+.sel-file{display:none;align-items:center;gap:10px;background:var(--bg-2);border:1px solid var(--border);border-radius:9px;padding:11px 14px;margin-top:10px}
+.sel-file.show{display:flex}
+.sel-file svg{color:var(--gold);flex-shrink:0}
+.sf-name{font-size:13px;font-weight:600;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sf-sz{font-size:12px;color:var(--t3);flex-shrink:0}
+.sf-rm{background:none;border:none;color:var(--t3);cursor:pointer;padding:3px 5px;border-radius:4px;font-size:17px;line-height:1;transition:color .15s}
+.sf-rm:hover{color:var(--red)}
+
+.prog-wrap{display:none;margin-top:10px}
+.prog-wrap.show{display:block}
+.prog-track{width:100%;height:6px;background:var(--bg-3);border-radius:3px;overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-2));border-radius:3px;transition:width .3s ease;width:0%}
+.prog-lbl{font-size:12px;color:var(--t2);margin-top:6px;display:flex;justify-content:space-between}
+
+.ctx{position:fixed;background:var(--bg-2);border:1px solid var(--border);border-radius:10px;padding:5px;z-index:9100;min-width:165px;box-shadow:0 8px 32px rgba(0,0,0,.6);display:none}
+.ctx.open{display:block}
+.ci{padding:9px 13px;border-radius:6px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:10px;color:var(--t1);transition:all .15s}
+.ci:hover{background:var(--gold-dim);color:var(--gold)}
+.ci.danger{color:var(--red)}
+.ci.danger:hover{background:rgba(248,113,113,.1);color:var(--red)}
+.cdiv{height:1px;background:var(--border);margin:4px 0}
+
+.toast{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--bg-2);border:1px solid var(--gold-border);border-radius:10px;padding:13px 18px;color:var(--t1);font-size:14px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 32px rgba(0,0,0,.55);transform:translateY(100px);opacity:0;transition:all .3s ease;max-width:320px}
+.toast.show{transform:translateY(0);opacity:1}
+.t-icon{color:var(--gold);font-size:16px}
+
+.modal::-webkit-scrollbar{width:5px}
+.modal::-webkit-scrollbar-track{background:transparent}
+.modal::-webkit-scrollbar-thumb{background:rgba(255,215,0,.25);border-radius:3px}
+
+@media(max-width:1024px){:root{--sidebar-w:240px}}
+@media(max-width:768px){:root{--sidebar-w:0px}.page{padding:20px}.grid{grid-template-columns:1fr}.frow{grid-template-columns:1fr}.ph{flex-direction:column;gap:14px}}
+</style>
+
+<div class="page">
+  <div class="ph">
+    <div>
+      <h1>Content Hub</h1>
+      <p>Manage all your content and video files in one place.</p>
+    </div>
+    <div class="ha">
+      <button class="btn ghost" onclick="exportCSV()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Export CSV
+      </button>
+      <button class="btn gold" onclick="openNew()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        New Content
+      </button>
+    </div>
+  </div>
+
+  <div class="dbs"><div class="dbd" id="dbd"></div><span id="dbt">Connecting…</span></div>
+
+  <div class="toolbar">
+    <div class="sw">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="si" id="q" placeholder="Search title, client, platform…" oninput="applyFilters()">
+      <button class="clr-btn" onclick="document.getElementById('q').value='';applyFilters()">×</button>
+    </div>
+    <select class="sel" id="fp" onchange="applyFilters()">
+      <option value="">All Platforms</option>
+      <option value="TikTok">TikTok</option>
+      <option value="Instagram">Instagram</option>
+      <option value="Facebook">Facebook</option>
+    </select>
+    <select class="sel" id="fc" onchange="applyFilters()"><option value="">All Clients</option></select>
+    <select class="sel" id="fv" onchange="applyFilters()">
+      <option value="">All Files</option>
+      <option value="yes">Has Video</option>
+      <option value="no">No Video</option>
+    </select>
+    <div class="rc" id="rc"><b>0</b> items</div>
+  </div>
+
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-s="all"       onclick="setTab('all',this)">All <span class="tc" id="c-all">0</span></button>
+    <button class="tab" data-s="Idea"          onclick="setTab('Idea',this)">Idea <span class="tc" id="c-Idea">0</span></button>
+    <button class="tab" data-s="Script"        onclick="setTab('Script',this)">Script <span class="tc" id="c-Script">0</span></button>
+    <button class="tab" data-s="Created"       onclick="setTab('Created',this)">Created <span class="tc" id="c-Created">0</span></button>
+    <button class="tab" data-s="Edited"        onclick="setTab('Edited',this)">Edited <span class="tc" id="c-Edited">0</span></button>
+    <button class="tab" data-s="Scheduled"     onclick="setTab('Scheduled',this)">Scheduled <span class="tc" id="c-Scheduled">0</span></button>
+    <button class="tab" data-s="Posted"        onclick="setTab('Posted',this)">Posted <span class="tc" id="c-Posted">0</span></button>
+  </div>
+
+  <div class="grid" id="grid">
+    <div class="sk" id="sk1"><div class="sk-th"></div><div class="sk-bd"><div class="sk-ln" style="height:16px;width:55%"></div><div class="sk-ln" style="height:13px;width:35%"></div><div class="sk-ln" style="height:16px;width:72%;margin-top:14px"></div><div class="sk-ln" style="height:13px;width:42%"></div><div class="sk-ln" style="height:1px;margin-top:13px"></div><div style="display:flex;justify-content:space-between;margin-top:10px"><div class="sk-ln" style="height:12px;width:28%;margin:0"></div><div class="sk-ln" style="height:12px;width:18%;margin:0"></div></div></div></div>
+    <div class="sk" id="sk2"><div class="sk-th"></div><div class="sk-bd"><div class="sk-ln" style="height:16px;width:68%"></div><div class="sk-ln" style="height:13px;width:40%"></div><div class="sk-ln" style="height:16px;width:80%;margin-top:14px"></div><div class="sk-ln" style="height:13px;width:50%"></div><div class="sk-ln" style="height:1px;margin-top:13px"></div><div style="display:flex;justify-content:space-between;margin-top:10px"><div class="sk-ln" style="height:12px;width:28%;margin:0"></div><div class="sk-ln" style="height:12px;width:18%;margin:0"></div></div></div></div>
+    <div class="sk" id="sk3"><div class="sk-th"></div><div class="sk-bd"><div class="sk-ln" style="height:16px;width:48%"></div><div class="sk-ln" style="height:13px;width:33%"></div><div class="sk-ln" style="height:16px;width:65%;margin-top:14px"></div><div class="sk-ln" style="height:13px;width:45%"></div><div class="sk-ln" style="height:1px;margin-top:13px"></div><div style="display:flex;justify-content:space-between;margin-top:10px"><div class="sk-ln" style="height:12px;width:28%;margin:0"></div><div class="sk-ln" style="height:12px;width:18%;margin:0"></div></div></div></div>
+    <div class="empty" id="empty">
+      <div class="ei"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+      <h3 id="e-title">No content yet</h3>
+      <p id="e-msg">Add your first piece of content to get started.</p>
+      <button class="btn gold" onclick="openNew()"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add Content</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="overlay" id="modal">
+  <div class="modal">
+    <div class="mh"><h2 id="m-title">New Content</h2><button class="mcl" onclick="closeModal()">×</button></div>
+
+    <div class="fg"><label class="fl">Title *</label><input type="text" class="fi" id="i-title" placeholder="e.g. Summer Collection Launch"></div>
+    <div class="frow">
+      <div class="fg"><label class="fl">Client *</label><input type="text" class="fi" id="i-client" placeholder="e.g. Luxe Beauty Co" list="cl-list"><datalist id="cl-list"></datalist></div>
+      <div class="fg"><label class="fl">Platform * <span id="plat-err" style="color:var(--red);font-size:11px;text-transform:none;letter-spacing:0;display:none">— select at least one</span></label>
+        <div class="plat-toggles">
+          <button type="button" class="plat-toggle" data-p="TikTok" onclick="togglePlat(this)">
+            <span class="pt-check"></span>TikTok
+          </button>
+          <button type="button" class="plat-toggle" data-p="Instagram" onclick="togglePlat(this)">
+            <span class="pt-check"></span>Instagram
+          </button>
+          <button type="button" class="plat-toggle" data-p="Facebook" onclick="togglePlat(this)">
+            <span class="pt-check"></span>Facebook
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="frow">
+      <div class="fg"><label class="fl">Status</label><select class="fs" id="i-status"><option>Idea</option><option>Script</option><option>Created</option><option>Edited</option><option>Scheduled</option><option>Posted</option></select></div>
+      <div class="fg"><label class="fl">Date</label><input type="date" class="fi" id="i-date"></div>
+    </div>
+    <div class="fg"><label class="fl">Views (if posted)</label><input type="text" class="fi" id="i-views" placeholder="e.g. 45.2k"></div>
+
+    <!-- VIDEO FILE UPLOAD -->
+    <div style="margin-bottom:16px">
+      <span class="upload-label">Video File</span>
+
+      <!-- Existing file banner (edit mode) -->
+      <div class="ef-banner" id="ef-banner">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        <div class="ef-info"><div class="ef-name" id="ef-name">video.mp4</div><div class="ef-sz" id="ef-sz">—</div></div>
+        <div style="display:flex;gap:8px">
+          <button class="btn gold" style="padding:6px 12px;font-size:12px" onclick="dlFile(event, editId)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </button>
+          <button class="ef-rm" onclick="removeExisting()">Replace</button>
+        </div>
+      </div>
+
+      <!-- Drop zone -->
+      <div class="dzone" id="dzone">
+        <input type="file" id="file-inp" accept="video/mp4,video/mov,video/avi,video/quicktime,video/*,image/jpeg,image/png,image/webp,image/gif" onchange="onFileSelected(this)">
+<div class="dzone-icon"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+<h4>Drop video or photo here or click to browse</h4>
+<p>MP4, MOV, AVI, JPG, PNG, WEBP — max 800 MB</p></div>
+        
+
+      <!-- Selected file -->
+      <div class="sel-file" id="sel-file">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        <span class="sf-name" id="sf-name"></span>
+        <span class="sf-sz" id="sf-sz"></span>
+        <button class="sf-rm" onclick="clearFile()">×</button>
+      </div>
+
+      <!-- Progress -->
+      <div class="prog-wrap" id="prog-wrap">
+        <div class="prog-track"><div class="prog-fill" id="prog-fill"></div></div>
+        <div class="prog-lbl"><span id="prog-txt">Uploading…</span><span id="prog-pct">0%</span></div>
+      </div>
+    </div>
+
+    <div class="fg"><label class="fl">Notes</label><textarea class="ft" id="i-notes" placeholder="Any extra notes…"></textarea></div>
+
+    <div class="mft">
+      <button class="btn ghost" onclick="closeModal()">Cancel</button>
+      <button class="btn gold" id="save-btn" onclick="saveContent()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Save Content
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- CONTEXT MENU -->
+<div class="ctx" id="ctx">
+  <div class="ci" onclick="ctxEdit()"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Edit</div>
+  <div class="ci" id="ctx-dl" onclick="ctxDownload()"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Video</div>
+  <div class="ci" onclick="ctxNext()"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Next Status</div>
+  <div class="cdiv"></div>
+  <div class="ci danger" onclick="ctxDel()"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/></svg>Delete</div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span class="t-icon" id="t-icon">✓</span><span id="t-msg">Saved</span></div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// CONFIG — replace these with your actual values
+// ═══════════════════════════════════════════════════
+const SB_URL    = 'https://kebpavcsqzuqobhxubzl.supabase.co';        // e.g. https://abcdef.supabase.co
+const SB_KEY    = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlYnBhdmNzcXp1cW9iaHh1YnpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEzNjY3MzgsImV4cCI6MjA4Njk0MjczOH0.y3V8RFnFiEYRkX1sTxNXZCdY0a-ZicepbzjjVogFe5Q';   // anon/public key from Project Settings > API
+const SB_BUCKET = 'Videos';                   // storage bucket name (create this in Supabase)
+
+// ═══════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════
+let all=[], filtered=[], activeSt='all', editId=null, ctxId=null;
+let selFile=null, replacingFile=false, isSB=false;
+
+// ═══════════════════════════════════════════════════
+// SUPABASE HELPERS
+// ═══════════════════════════════════════════════════
+const h = () => ({ 'apikey':SB_KEY, 'Authorization':`Bearer ${SB_KEY}`, 'Content-Type':'application/json', 'Prefer':'return=representation' });
+
+async function sbQ(path, opts={}) {
+  const r = await fetch(`${SB_URL}/rest/v1/${path}`, {...opts, headers:{...h(),...(opts.headers||{})}});
+  if (!r.ok) throw new Error(await r.text());
+  return r.status===204 ? null : r.json();
+}
+
+// XHR upload so we get real progress events
+function sbUpload(storagePath, file, onProg) {
+  return new Promise((res, rej) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', `${SB_URL}/storage/v1/object/${SB_BUCKET}/${storagePath}`);
+    xhr.setRequestHeader('apikey', SB_KEY);
+    xhr.setRequestHeader('Authorization', `Bearer ${SB_KEY}`);
+    xhr.setRequestHeader('x-upsert', 'true');
+    xhr.upload.onprogress = e => { if(e.lengthComputable) onProg(Math.round(e.loaded/e.total*100)); };
+    xhr.onload  = () => xhr.status < 300 ? res(JSON.parse(xhr.responseText)) : rej(new Error(xhr.responseText));
+    xhr.onerror = () => rej(new Error('Network error'));
+    xhr.send(file);
+  });
+}
+
+function sbDelFile(path) {
+  return fetch(`${SB_URL}/storage/v1/object/${SB_BUCKET}/${path}`, {
+    method:'DELETE', headers:{'apikey':SB_KEY,'Authorization':`Bearer ${SB_KEY}`}
+  });
+}
+
+const sbFileUrl = (path, download = false) => {
+  let url = `${SB_URL}/storage/v1/object/public/${SB_BUCKET}/${path}`;
+  if (download) url += '?download=';
+  return url;
+};
+
+
+
+
+// ═══════════════════════════════════════════════════
+// DEMO DATA (fallback when Supabase is unreachable)
+// ═══════════════════════════════════════════════════
+const DEMO = [];
+
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+async function init() {
+  document.getElementById('i-date').value = today();
+  document.getElementById('i-title').addEventListener('input', updateSaveButtonState);
+  document.getElementById('i-client').addEventListener('input', updateSaveButtonState);
+  if (SB_URL !== 'YOUR_SUPABASE_URL') {
+    try {
+      all = await sbQ('content?order=created_at.desc') || [];
+      isSB = true;
+      setDb('ok','Connected to Supabase');
+    } catch(e) {
+      console.warn(e);
+      all = [...DEMO];
+      setDb('warn','Demo mode — Supabase unreachable');
+    }
+  } else {
+    all = [...DEMO];
+    setDb('warn','Demo mode — add your Supabase credentials to persist data');
+  }
+  ['sk1','sk2','sk3'].forEach(id=>{ const el=document.getElementById(id); if(el) el.remove(); });
+  buildClientDrop();
+  applyFilters();
+}
+
+function setDb(s,msg) {
+  const d=document.getElementById('dbd'); d.className='dbd';
+  if(s==='warn') d.classList.add('warn');
+  if(s==='err')  d.classList.add('err');
+  document.getElementById('dbt').textContent=msg;
+}
+
+// ═══════════════════════════════════════════════════
+// FILTERS & TABS
+// ═══════════════════════════════════════════════════
+function setTab(s,el) {
+  activeSt=s;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  applyFilters();
+}
+
+function applyFilters() {
+  const q  = document.getElementById('q').value.toLowerCase();
+  const fp = document.getElementById('fp').value;
+  const fc = document.getElementById('fc').value;
+  const fv = document.getElementById('fv').value;
+
+  filtered = all.filter(x => {
+    if (activeSt!=='all' && x.status!==activeSt) return false;
+    if (q && !x.title.toLowerCase().includes(q) && !x.client.toLowerCase().includes(q) && !x.platform.toLowerCase().includes(q)) return false;
+    if (fp && !(Array.isArray(x.platforms) ? x.platforms.includes(fp) : x.platform===fp)) return false;
+    if (fc && x.client!==fc)   return false;
+    if (fv==='yes' && !x.file_path) return false;
+    if (fv==='no'  &&  x.file_path) return false;
+    return true;
+  });
+
+  ['Idea','Script','Created','Edited','Scheduled','Posted'].forEach(s => {
+    const el=document.getElementById('c-'+s); if(el) el.textContent=all.filter(x=>x.status===s).length;
+  });
+  document.getElementById('c-all').textContent=all.length;
+  document.getElementById('rc').innerHTML=`<b>${filtered.length}</b> item${filtered.length!==1?'s':''}`;
+  render();
+}
+
+// ═══════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════
+function render() {
+  const grid=document.getElementById('grid'), empty=document.getElementById('empty');
+  grid.querySelectorAll('.card').forEach(c=>c.remove());
+
+  if (!filtered.length) {
+    empty.classList.add('show');
+    const hasF = document.getElementById('q').value||document.getElementById('fp').value||document.getElementById('fc').value||activeSt!=='all';
+    document.getElementById('e-title').textContent = hasF?'No results found':'No content yet';
+    document.getElementById('e-msg').textContent   = hasF?'Try adjusting your search or filters.':'Add your first piece of content to get started.';
+    return;
+  }
+  empty.classList.remove('show');
+
+  filtered.forEach(item => {
+  const isPhoto = item.file_name && /\.(jpe?g|png|webp|gif)$/i.test(item.file_name);
+  const card=document.createElement('div');
+  card.className='card'+(item.file_path?' has-file':'');
+    card.dataset.id=item.id;
+
+    const sc='s-'+item.status.toLowerCase();
+    const platforms = Array.isArray(item.platforms) ? item.platforms : (item.platform ? [item.platform] : []);
+    const pillMap={'TikTok':'ppill-tiktok','Instagram':'ppill-instagram','Facebook':'ppill-facebook'};
+    const platShort={'TikTok':'TikTok','Instagram':'IG','Facebook':'Facebook'};
+    const pillsHtml=platforms.map(p=>`<span class="ppill ${pillMap[p]||''}">${platShort[p]||p}</span>`).join('');
+    const viewsHtml=item.views?`<div class="cviews"><b>${esc(item.views)}</b> views</div>`:`<div class="cviews" style="color:var(--t3)">—</div>`;
+
+    card.innerHTML=`
+      <div class="cthumb">
+        <svg class="cthumb-icon" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        <span class="vbadge">${isPhoto ? 'PHOTO' : 'VIDEO'}</span>
+        <div class="szlbl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          ${fmtSz(item.file_size)}
+        </div>
+        <div class="fthumb-name">${esc(item.file_name||'')}</div>
+      </div>
+      <div class="cbody">
+        <div class="ctop"><span class="badge ${sc}">${item.status}</span><div class="plat-pills">${pillsHtml}</div></div>
+        <div class="ctitle">${esc(item.title)}</div>
+        <div class="cclient">${esc(item.client)}</div>
+        <div class="cfoot">
+          <div class="cdate">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            ${fmtDt(item.date)}
+          </div>
+          ${viewsHtml}
+          <div class="cacts">
+            ${item.file_path?`<button class="ib dl" onclick="dlFile(event,${item.id})" title="Download video"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>`:''}
+            <button class="ib" onclick="openEdit(${item.id})" title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            <button class="ib" onclick="openCtx(event,${item.id})" title="More"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg></button>
+          </div>
+        </div>
+      </div>`;
+
+    card.addEventListener('click', e => { if(e.target.closest('.ib')) return; openEdit(item.id); });
+    grid.insertBefore(card, document.getElementById('empty'));
+  });
+}
+
+// ═══════════════════════════════════════════════════
+// PLATFORM TOGGLES
+// ═══════════════════════════════════════════════════
+function togglePlat(btn) {
+  btn.classList.toggle('on');
+  document.getElementById('plat-err').style.display='none';
+  updateSaveButtonState();
+}
+
+function updateSaveButtonState() {
+  const saveBtn = document.getElementById('save-btn');
+  const title = document.getElementById('i-title')?.value.trim();
+  const client = document.getElementById('i-client')?.value.trim();
+  const platforms = getSelectedPlats();
+  const isValid = title && client && platforms.length > 0;
+  saveBtn.disabled = !isValid;
+}
+
+function getSelectedPlats() {
+  return [...document.querySelectorAll('.plat-toggle.on')].map(b=>b.dataset.p);
+}
+
+function setSelectedPlats(arr) {
+  document.querySelectorAll('.plat-toggle').forEach(b=>{
+    b.classList.toggle('on', Array.isArray(arr) && arr.includes(b.dataset.p));
+  });
+}
+
+function clearPlats() {
+  document.querySelectorAll('.plat-toggle').forEach(b=>b.classList.remove('on'));
+}
+
+
+function openNew() {
+  editId=null; selFile=null; replacingFile=false;
+  document.getElementById('m-title').textContent='New Content';
+  setSaveBtn('Save Content'); clearForm(); clearPlats(); hideBanners(); showDz(true);
+  document.getElementById('modal').classList.add('open');
+  updateSaveButtonState();
+}
+
+function openEdit(id) {
+  const item=all.find(x=>x.id===id); if(!item) return;
+  editId=id; selFile=null; replacingFile=false;
+  document.getElementById('m-title').textContent='Edit Content';
+  setSaveBtn('Update Content');
+  document.getElementById('i-title').value    = item.title;
+  document.getElementById('i-client').value   = item.client;
+  setSelectedPlats(item.platforms || (item.platform ? [item.platform] : []));
+  document.getElementById('i-status').value   = item.status;
+  document.getElementById('i-date').value     = item.date||'';
+  document.getElementById('i-views').value    = item.views||'';
+  document.getElementById('i-notes').value    = item.notes||'';
+
+  if (item.file_path) { showEF(item.file_name, item.file_size); showDz(false); }
+  else { hideBanners(); showDz(true); }
+  document.getElementById('modal').classList.add('open');
+  updateSaveButtonState();
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  clearFile(); hideProgress(); editId=null;
+}
+
+function clearForm() {
+  ['i-title','i-client','i-views','i-notes'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('i-status').value='Idea';
+  document.getElementById('i-date').value=today();
+}
+
+function setSaveBtn(lbl) {
+  document.getElementById('save-btn').innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>${lbl}`;
+}
+
+function showEF(name,size) { document.getElementById('ef-name').textContent=name||'video file'; document.getElementById('ef-sz').textContent=fmtSz(size)||'—'; document.getElementById('ef-banner').classList.add('show'); }
+function hideBanners()     { document.getElementById('ef-banner').classList.remove('show'); document.getElementById('sel-file').classList.remove('show'); }
+function showDz(show)      { document.getElementById('dzone').style.display=show?'':'none'; }
+
+function removeExisting()  { replacingFile=true; document.getElementById('ef-banner').classList.remove('show'); showDz(true); toast('Existing file will be replaced when you save','⚠'); }
+
+// ═══════════════════════════════════════════════════
+// FILE INPUT
+// ═══════════════════════════════════════════════════
+function onFileSelected(inp) {
+  const f=inp.files[0]; if(!f) return;
+  if(f.size>800*1024*1024){ toast('File must be under 800 MB','⚠'); inp.value=''; return; }
+  selFile=f;
+  document.getElementById('sf-name').textContent=f.name;
+  document.getElementById('sf-sz').textContent=fmtSz(f.size);
+  document.getElementById('sel-file').classList.add('show');
+}
+
+function clearFile() {
+  selFile=null; document.getElementById('file-inp').value='';
+  document.getElementById('sel-file').classList.remove('show');
+  document.getElementById('sf-name').textContent='';
+  document.getElementById('sf-sz').textContent='';
+}
+
+// Drag & drop
+const dz=document.getElementById('dzone');
+dz.addEventListener('dragover', e=>{ e.preventDefault(); dz.classList.add('over'); });
+dz.addEventListener('dragleave', ()=>dz.classList.remove('over'));
+dz.addEventListener('drop', e=>{
+  e.preventDefault(); dz.classList.remove('over');
+  const f=e.dataTransfer?.files[0]; if(!f) return;
+  const dt=new DataTransfer(); dt.items.add(f);
+  document.getElementById('file-inp').files=dt.files;
+  onFileSelected(document.getElementById('file-inp'));
+});
+
+// ═══════════════════════════════════════════════════
+// PROGRESS
+// ═══════════════════════════════════════════════════
+function setProgress(pct) {
+  document.getElementById('prog-wrap').classList.add('show');
+  document.getElementById('prog-fill').style.width=pct+'%';
+  document.getElementById('prog-pct').textContent=pct+'%';
+  document.getElementById('prog-txt').textContent=pct<100?'Uploading…':'Upload complete ✓';
+}
+function hideProgress() { document.getElementById('prog-wrap').classList.remove('show'); document.getElementById('prog-fill').style.width='0%'; }
+
+// ═══════════════════════════════════════════════════
+// SAVE
+// ═══════════════════════════════════════════════════
+async function saveContent() {
+  const title    = document.getElementById('i-title').value.trim();
+  const client   = document.getElementById('i-client').value.trim();
+  const platforms = getSelectedPlats();
+  const status   = document.getElementById('i-status').value;
+  const date     = document.getElementById('i-date').value;
+  const views    = document.getElementById('i-views').value.trim();
+  const notes    = document.getElementById('i-notes').value.trim();
+
+  if (!title||!client) { toast('Title and Client are required','⚠'); return; }
+  if (!platforms||!Array.isArray(platforms)||platforms.length===0) { 
+    document.getElementById('plat-err').style.display='inline'; 
+    toast('Select at least one platform','⚠'); 
+    return; 
+  }
+
+  const btn=document.getElementById('save-btn'); btn.disabled=true;
+const payload={title,client,platforms,platform:platforms[0]||null,status,date,views,notes};
+
+  let oldPath=null;
+  if (editId) { const ex=all.find(x=>x.id===editId); oldPath=ex?.file_path||null; }
+
+  // ── Upload file if selected ──
+  let newPath=null, newName=null, newSize=null;
+  if (selFile) {
+    if (isSB) {
+      try {
+        const safeClient=client.replace(/[^a-zA-Z0-9]/g,'_').toLowerCase();
+        const safeName=selFile.name.replace(/[^a-zA-Z0-9._-]/g,'_');
+        const storagePath=`${safeClient}/${Date.now()}_${safeName}`;
+        setProgress(0);
+        await sbUpload(storagePath, selFile, p=>setProgress(p));
+        setTimeout(hideProgress,1500);
+        newPath=storagePath; newName=selFile.name; newSize=selFile.size;
+      } catch(e) { toast('Upload failed: '+e.message,'✗'); btn.disabled=false; return; }
+    } else {
+      // Demo: simulate progress
+      setProgress(0);
+      await fakeProgress(p=>setProgress(p));
+      setTimeout(hideProgress,1200);
+      newPath='demo/'+selFile.name; newName=selFile.name; newSize=selFile.size;
+    }
+  }
+
+  if (newPath)         { payload.file_path=newPath; payload.file_name=newName; payload.file_size=newSize; }
+  else if (replacingFile) { payload.file_path=null; payload.file_name=null; payload.file_size=null; }
+
+  // ── Save to DB ──
+  try {
+    if (isSB) {
+      if (editId) {
+        await sbQ(`content?id=eq.${editId}`,{method:'PATCH',body:JSON.stringify(payload)});
+        const i=all.findIndex(x=>x.id===editId); if(i!==-1) all[i]={...all[i],...payload};
+      } else {
+        const res=await sbQ('content',{method:'POST',body:JSON.stringify(payload)});
+        all.unshift(Array.isArray(res)?res[0]:res);
+      }
+      if (oldPath&&(newPath||replacingFile)) sbDelFile(oldPath).catch(()=>{});
+    } else {
+      if (editId) { const i=all.findIndex(x=>x.id===editId); if(i!==-1) all[i]={...all[i],...payload}; }
+      else all.unshift({id:Date.now(),...payload});
+    }
+  } catch(e) { toast('Save failed: '+e.message,'✗'); btn.disabled=false; return; }
+
+  btn.disabled=false;
+  closeModal(); buildClientDrop(); applyFilters();
+  toast(editId?'Content updated!':'Content added!','✓');
+}
+
+// ═══════════════════════════════════════════════════
+// DOWNLOAD
+// ═══════════════════════════════════════════════════
+function dlFile(e,id) {
+  e.stopPropagation();
+  const item=all.find(x=>x.id===id);
+  if (!item?.file_path){ 
+    console.error('Download failed: No file path for item', id);
+    toast('No video attached','⚠'); 
+    return; 
+  }
+  
+  // We add ?download= to the URL to force the browser to download instead of opening
+  const url = sbFileUrl(item.file_path, true);
+  const fileName = item.file_name || item.file_path.split('/').pop();
+
+  console.log('Attempting download:', {
+    id: item.id,
+    name: fileName,
+    path: item.file_path,
+    fullUrl: url
+  });
+
+  if (!isSB){ toast('Demo mode — no real file to download','⚠'); return; }
+  
+  toast('Starting download…','⬇');
+  
+  const a=document.createElement('a');
+  a.href=url;
+  a.download=fileName;
+  
+  // Append to body to ensure it works in all browsers
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+// ═══════════════════════════════════════════════════
+// DELETE
+// ═══════════════════════════════════════════════════
+async function delItem(id) {
+  if(!confirm('Delete this content and its video? This cannot be undone.')) return;
+  const item=all.find(x=>x.id===id);
+  if (isSB) {
+    try { await sbQ(`content?id=eq.${id}`,{method:'DELETE'}); if(item?.file_path) sbDelFile(item.file_path).catch(()=>{}); }
+    catch(e){ toast('Error: '+e.message,'✗'); return; }
+  }
+  all=all.filter(x=>x.id!==id); applyFilters(); toast('Deleted','✓');
+}
+
+// ═══════════════════════════════════════════════════
+// CONTEXT MENU
+// ═══════════════════════════════════════════════════
+function openCtx(e,id) {
+  e.stopPropagation(); ctxId=id;
+  const ctx=document.getElementById('ctx'); ctx.classList.add('open');
+  const item=all.find(x=>x.id===id);
+  document.getElementById('ctx-dl').style.display=item?.file_path?'':'none';
+  const x=e.clientX,y=e.clientY;
+  ctx.style.left=(x+170>window.innerWidth?x-170:x)+'px';
+  ctx.style.top=(y+150>window.innerHeight?y-150:y)+'px';
+}
+document.addEventListener('click',()=>document.getElementById('ctx').classList.remove('open'));
+function ctxEdit()     { openEdit(ctxId); }
+function ctxDownload() { dlFile({stopPropagation:()=>{}},ctxId); }
+function ctxDel()      { delItem(ctxId); }
+function ctxNext() {
+  const item=all.find(x=>x.id===ctxId); if(!item) return;
+  const ord=['Idea','Script','Created','Edited','Scheduled','Posted'];
+  const next=ord[(ord.indexOf(item.status)+1)%ord.length];
+  advSt(ctxId,next);
+}
+async function advSt(id,ns) {
+  if(isSB){ try{ await sbQ(`content?id=eq.${id}`,{method:'PATCH',body:JSON.stringify({status:ns})}); }catch(e){ toast('Error','✗'); return; } }
+  const i=all.findIndex(x=>x.id===id); if(i!==-1) all[i].status=ns;
+  applyFilters(); toast('Status → '+ns,'✓');
+}
+
+// ═══════════════════════════════════════════════════
+// CSV
+// ═══════════════════════════════════════════════════
+function exportCSV() {
+  const data=filtered.length?filtered:all;
+  const rows=[['Title','Client','Platforms','Status','Date','Views','Has Video','File Name','File Size','Notes']];
+  data.forEach(x=>{
+    const plats=Array.isArray(x.platforms)?x.platforms.join(' + '):(x.platform||'');
+    rows.push([`"${x.title}"`,`"${x.client}"`,`"${plats}"`,x.status,x.date||'',x.views||'',x.file_path?'Yes':'No',x.file_name||'',x.file_size?fmtSz(x.file_size):'',`"${(x.notes||'').replace(/"/g,'""')}"`]);
+  });
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([rows.map(r=>r.join(',')).join('\n')],{type:'text/csv'}));
+  a.download=`content-hub-${today()}.csv`; a.click();
+  toast('CSV exported!','✓');
+}
+
+// ═══════════════════════════════════════════════════
+// CLIENT DROPDOWN
+// ═══════════════════════════════════════════════════
+function buildClientDrop() {
+  const clients=[...new Set(all.map(x=>x.client))].sort();
+  const sel=document.getElementById('fc'), dl=document.getElementById('cl-list');
+  while(sel.children.length>1) sel.removeChild(sel.lastChild);
+  dl.innerHTML='';
+  clients.forEach(c=>{ const o=document.createElement('option'); o.value=o.textContent=c; sel.appendChild(o.cloneNode(true)); dl.appendChild(o); });
+}
+
+// ═══════════════════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════════════════
+let _tt;
+function toast(msg,ico='✓') {
+  clearTimeout(_tt); const t=document.getElementById('toast');
+  document.getElementById('t-msg').textContent=msg; document.getElementById('t-icon').textContent=ico;
+  t.classList.add('show'); _tt=setTimeout(()=>t.classList.remove('show'),3200);
+}
+
+// ═══════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════
+function esc(s)   { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function today()  { return new Date().toISOString().split('T')[0]; }
+function fmtDt(d) { if(!d) return '—'; return new Date(d).toLocaleDateString('en-IE',{day:'2-digit',month:'short',year:'numeric'}); }
+function fmtSz(b) { if(!b) return ''; if(b>1073741824) return (b/1073741824).toFixed(1)+' GB'; if(b>1048576) return (b/1048576).toFixed(1)+' MB'; return (b/1024).toFixed(0)+' KB'; }
+
+function fakeProgress(cb) {
+  return new Promise(res => {
+    let p=0;
+    const iv=setInterval(()=>{ p+=Math.random()*18+5; if(p>=100){ p=100; clearInterval(iv); cb(100); res(); } else cb(Math.floor(p)); },120);
+  });
+}
+
+// Close on backdrop / Escape
+document.getElementById('modal').addEventListener('click', e=>{ if(e.target===document.getElementById('modal')) closeModal(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+
+init();
+</script>
+    </main>
+
+    <footer></footer>
+
+    <script src="/JS/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.28.1/dist/supabase.min.js"></script>
+</body>
+</html>

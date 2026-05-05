@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Generator | JSU Marketing</title>
+    <link rel="stylesheet" href="/CSS/sidebar.css">
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">J</div>
+                <span class="logo-text">JSU Marketing</span>
+            </div>
+            <button class="collapse-btn" id="collapseBtn" aria-label="Toggle sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="menu-section">
+            <h3 class="menu-title">Navigation</h3>
+            <ul class="menu-list">
+                <li class="menu-item active">
+                    <a href="/" class="menu-link" data-menu="dashboard" data-tooltip="Dashboard">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/content-hub/" class="menu-link" data-menu="content" data-tooltip="Content Hub">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span class="menu-text">Content Hub</span>
+                    </a>
+                </li>
+                                <li class="menu-item">
+                    <a href="/content-plan/" class="menu-link" data-menu="upload" data-tooltip="Bulk Upload">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <span class="menu-text">Content Plan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="/caption-generator/" class="menu-link" data-menu="ai" data-tooltip="AI Generator">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 8v4l3 3"></path>
+                        </svg>
+                        <span class="menu-text">AI Generator</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="/clients/" class="menu-link" data-menu="clients" data-tooltip="Clients">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span class="menu-text">Clients</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/analytics-dashboard/" class="menu-link" data-menu="analytics" data-tooltip="Analytics">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                        <span class="menu-text">Analytics</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/report-generator/" class="menu-link" data-menu="reports" data-tooltip="Reports">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                        <span class="menu-text">Reports</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+*{box-sizing:border-box}
+
+:root{
+  --gold:#FFD700;--gold-2:#FFC700;--gold-dim:rgba(255,215,0,.12);--gold-border:rgba(255,215,0,.28);
+  --bg-0:#060606;--bg-1:#0e0e0e;--bg-2:#171717;--bg-3:#222;--bg-card:#111;
+  --t1:#f0f0f0;--t2:#aaa;--t3:#666;--border:#252525;
+  --green:#4ade80;--blue:#38bdf8;--purple:#a78bfa;--amber:#fbbf24;--orange:#f97316;--slate:#9ca3af;
+  --red:#f87171;--sidebar-w:340px;
+}
+
+body{margin:0;font-family:'DM Sans',sans-serif;background:var(--bg-0);color:var(--t1);min-height:100vh}
+main{margin-left:var(--sidebar-w);min-height:100vh;transition:margin-left .3s ease}
+body.sidebar-collapsed main{margin-left:80px}
+.page{padding:36px 40px;max-width:1440px}
+
+.ph{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:28px}
+.ph h1{font-family:'Syne',sans-serif;font-size:32px;font-weight:700;margin:0 0 5px;letter-spacing:-.5px}
+.ph p{color:var(--t2);margin:0;font-size:14px}
+.ha{display:flex;gap:10px;align-items:center}
+
+.btn{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border-radius:8px;font-size:14px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;border:none;transition:all .2s;white-space:nowrap;text-decoration:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#0a0a0a;font-weight:700;box-shadow:0 4px 16px rgba(255,215,0,.22)}
+.btn-primary:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 6px 22px rgba(255,215,0,.38)}
+.btn-secondary{background:var(--bg-3);border:1px solid var(--border);color:var(--t1)}
+.btn-secondary:hover{border-color:var(--gold-border);color:var(--gold);background:var(--gold-dim)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none!important}
+
+.report-builder{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:28px;margin-bottom:28px}
+.builder-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin:0 0 20px;color:var(--t1)}
+
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-bottom:20px}
+
+.form-group{display:flex;flex-direction:column}
+.form-label{font-size:12px;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;font-weight:600}
+.form-input,.form-select{width:100%;padding:10px 12px;background:var(--bg-2);border:1px solid var(--border);border-radius:8px;color:var(--t1);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .2s}
+.form-input:focus,.form-select:focus{border-color:var(--gold-border);box-shadow:0 0 0 3px rgba(255,215,0,.07)}
+.form-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;padding-right:32px}
+
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.metric-checkbox{display:flex;align-items:center;gap:8px;padding:10px;background:var(--bg-1);border:1px solid var(--border);border-radius:6px;cursor:pointer;transition:all .2s;font-size:13px}
+.metric-checkbox:hover{border-color:var(--gold-border)}
+.metric-checkbox input{cursor:pointer}
+.metric-checkbox input:checked{accent-color:var(--gold)}
+
+.report-preview{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:28px;margin-bottom:28px;display:none}
+.report-preview.active{display:block}
+.report-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.report-title{font-family:'Syne',sans-serif;font-size:24px;font-weight:700;margin:0}
+
+.report-section{margin-bottom:28px}
+.report-section-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid var(--gold)}
+.report-content{color:var(--t2);line-height:1.6}
+.report-content p{margin:0 0 12px}
+.report-content ul{margin:0 0 12px;padding-left:20px}
+.report-content li{margin-bottom:8px}
+
+.report-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:16px 0}
+.report-stat-item{background:var(--bg-1);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center}
+.report-stat-label{font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.report-stat-value{font-family:'Syne',sans-serif;font-size:24px;font-weight:700;color:var(--gold)}
+
+.loading{display:none;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;gap:20px}
+.loading.show{display:flex}
+.spinner{width:48px;height:48px;border:4px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading p{color:var(--gold);font-weight:600;font-size:14px}
+
+.error-box{background:rgba(248,113,113,.1);border:1px solid var(--red);border-radius:8px;padding:16px;color:var(--red);margin-bottom:24px;display:none}
+.error-box.show{display:block}
+
+.toast{position:fixed;bottom:24px;right:24px;background:var(--bg-card);border:1px solid var(--gold-border);border-radius:8px;padding:14px 18px;color:var(--t1);font-size:13px;font-weight:500;display:flex;align-items:center;gap:10px;opacity:0;transform:translateY(20px);transition:all .3s;pointer-events:none;z-index:2000}
+.toast.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.toast.success{border-color:var(--green);color:var(--green)}
+.toast.error{border-color:var(--red);color:var(--red)}
+
+@media (max-width:768px){
+  .page{padding:20px}
+  .ph{flex-direction:column}
+  .report-builder{padding:20px}
+  .form-grid{grid-template-columns:1fr}
+  .report-header{flex-direction:column;align-items:flex-start;gap:12px}
+}
+</style>
+
+<div class="page">
+  <div class="ph">
+    <div>
+      <h1>Monthly Reports</h1>
+      <p>Generate AI-powered reports using real Supabase data</p>
+    </div>
+    <div class="ha">
+      <button class="btn btn-primary" onclick="generateReport()" id="generateBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12h14"></path>
+        </svg>
+        <span>Generate Report</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="errorMessage" class="error-box"></div>
+
+  <!-- Report Builder -->
+  <div class="report-builder">
+    <h2 class="builder-title">Report Configuration</h2>
+    
+    <div class="form-grid">
+      <div class="form-group">
+        <label class="form-label">Select Client</label>
+        <select class="form-select" id="clientSelect">
+          <option value="">Loading clients...</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Report Month</label>
+        <input type="month" class="form-input" id="reportMonth" value="2026-02">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Report Type</label>
+        <select class="form-select" id="reportType">
+          <option value="comprehensive">Comprehensive</option>
+          <option value="executive">Executive Summary</option>
+          <option value="analytics">Analytics Focus</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Metrics Selection -->
+    <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border)">
+      <div style="font-size:12px;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;font-weight:600">Include Metrics</div>
+      <div class="metrics-grid">
+        <label class="metric-checkbox">
+          <input type="checkbox" name="metrics" value="content" checked>
+          <span>Content Metrics</span>
+        </label>
+        <label class="metric-checkbox">
+          <input type="checkbox" name="metrics" value="platforms" checked>
+          <span>Platform Breakdown</span>
+        </label>
+        <label class="metric-checkbox">
+          <input type="checkbox" name="metrics" value="performance" checked>
+          <span>Performance</span>
+        </label>
+        <label class="metric-checkbox">
+          <input type="checkbox" name="metrics" value="recommendations">
+          <span>AI Recommendations</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  <div id="loadingSpinner" class="loading">
+    <div class="spinner"></div>
+    <p>Generating your report...</p>
+  </div>
+
+  <!-- Report Preview -->
+  <div class="report-preview" id="reportPreview">
+    <div class="report-header">
+      <div>
+        <h2 class="report-title" id="reportClientName"></h2>
+        <div style="font-size:13px;color:var(--t2)" id="reportDateRange"></div>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-secondary" onclick="shareReport()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          <span>Share</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="reportContent"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// CONFIG - USING SAME API AS CAPTION GENERATOR
+// ═══════════════════════════════════════════════════════════════
+const CONFIG = {
+  SUPABASE_URL: 'https://kebpavcsqzuqobhxubzl.supabase.co',
+  SUPABASE_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlYnBhdmNzcXp1cW9iaHh1YnpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEzNjY3MzgsImV4cCI6MjA4Njk0MjczOH0.y3V8RFnFiEYRkX1sTxNXZCdY0a-ZicepbzjjVogFe5Q'
+};
+
+const sb = window.supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_KEY);
+
+let clientsData = [];
+let currentClientData = null;
+
+async function init() {
+  try {
+    const { data: clients, error } = await sb.from('clients').select('*').order('created_at', {ascending: false});
+    
+    if (error) throw error;
+
+    clientsData = clients || [];
+    
+    const clientSelect = document.getElementById('clientSelect');
+    clientSelect.innerHTML = '<option value="">Select a client...</option>';
+    clientsData.forEach(client => {
+      const option = document.createElement('option');
+      option.value = client.id;
+      option.textContent = client.name;
+      clientSelect.appendChild(option);
+    });
+
+    showToast('Loaded ' + clientsData.length + ' clients', 'success');
+  } catch (error) {
+    showError('Failed to load clients: ' + error.message);
+  }
+}
+
+async function generateReport() {
+  const clientId = document.getElementById('clientSelect').value;
+  const month = document.getElementById('reportMonth').value;
+  const reportType = document.getElementById('reportType').value;
+  
+  if (!clientId) {
+    showError('Please select a client');
+    return;
+  }
+
+  document.getElementById('loadingSpinner').classList.add('show');
+  document.getElementById('reportPreview').classList.remove('active');
+  document.getElementById('generateBtn').disabled = true;
+
+  try {
+    currentClientData = clientsData.find(c => c.id === parseInt(clientId));
+    
+    const { data: content, error: contentError } = await sb
+      .from('content')
+      .select('*')
+      .eq('client', currentClientData.name);
+
+    if (contentError) throw contentError;
+
+    const metrics = calculateMetrics(content || []);
+    const selectedMetrics = Array.from(document.querySelectorAll('input[name="metrics"]:checked')).map(el => el.value);
+    const prompt = buildPrompt(currentClientData, month, reportType, metrics, selectedMetrics);
+
+    const reportContent = await callGeminiAPI(prompt);
+    displayReport(currentClientData, month, reportContent, metrics);
+    showToast('Report generated!', 'success');
+  } catch (error) {
+    showError(error.message);
+  } finally {
+    document.getElementById('loadingSpinner').classList.remove('show');
+    document.getElementById('generateBtn').disabled = false;
+  }
+}
+
+async function callGeminiAPI(prompt) {
+  try {
+    const response = await fetch('/api/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt })
+    });
+
+    if (!response.ok) throw new Error('Generation failed');
+    const data = await response.json();
+    if (data.text) return data.text;
+    throw new Error(data.error || 'No content returned');
+  } catch (e) {
+    throw new Error('Generation failed. Please try again.');
+  }
+}
+
+function calculateMetrics(content) {
+  const platforms = {};
+  const statuses = {};
+  let totalViews = 0;
+
+  content.forEach(item => {
+    if (item.platform) platforms[item.platform] = (platforms[item.platform] || 0) + 1;
+    if (item.status) statuses[item.status] = (statuses[item.status] || 0) + 1;
+    totalViews += parseInt(item.views) || 0;
+  });
+
+  return {
+    totalContent: content.length,
+    platforms,
+    statuses,
+    totalViews,
+    avgViews: content.length > 0 ? Math.round(totalViews / content.length) : 0,
+    topPerformers: content.filter(c => c.views).sort((a, b) => parseInt(b.views) - parseInt(a.views)).slice(0, 3)
+  };
+}
+
+function buildPrompt(client, month, reportType, metrics, selectedMetrics) {
+  const [year, monthNum] = month.split('-');
+  const monthName = new Date(year, monthNum - 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  
+  return `Generate a ${reportType} monthly report for ${client.name} for ${monthName}.
+
+CLIENT: ${client.name}
+PLAN: ${client.plan_name}
+
+METRICS:
+- Total Content: ${metrics.totalContent} pieces
+- Total Views: ${metrics.totalViews.toLocaleString()}
+- Average Views: ${metrics.avgViews.toLocaleString()} per post
+
+PLATFORMS: ${Object.entries(metrics.platforms).map(([p, c]) => `${p} (${c})`).join(', ')}
+
+STATUS: ${Object.entries(metrics.statuses).map(([s, c]) => `${s} (${c})`).join(', ')}
+
+${selectedMetrics.includes('recommendations') ? 'INCLUDE: Strategic recommendations for next month' : ''}
+
+Create a professional, client-ready report with insights and analysis. Use specific numbers and percentages.The name of the marketing company is "JSU Marketing". Their Email is "JSUMarketingTeam@gmail.com. They do no share their phone number. Their website is "www.jsumarketing.com". The report should be concise, visually appealing, and easy to understand make sure you make it readable like a human-written document. Don't use unusual symbols keep it clean, professional and readable. Use bullet points, headings, and short paragraphs to organize the content. Avoid jargon and ensure the language is clear and actionable.`;
+}
+
+function displayReport(client, month, content, metrics) {
+  const [year, monthNum] = month.split('-');
+  const monthName = new Date(year, monthNum - 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  
+  document.getElementById('reportClientName').textContent = `${client.name} - Monthly Report`;
+  document.getElementById('reportDateRange').textContent = monthName;
+
+  let html = `<div class="report-stats">
+    <div class="report-stat-item">
+      <div class="report-stat-label">Content Created</div>
+      <div class="report-stat-value">${metrics.totalContent}</div>
+    </div>
+    <div class="report-stat-item">
+      <div class="report-stat-label">Total Views</div>
+      <div class="report-stat-value">${(metrics.totalViews / 1000).toFixed(1)}K</div>
+    </div>
+    <div class="report-stat-item">
+      <div class="report-stat-label">Avg Views</div>
+      <div class="report-stat-value">${(metrics.avgViews / 1000).toFixed(1)}K</div>
+    </div>
+  </div>`;
+
+  html += '<div class="report-section"><h2 class="report-section-title">AI Report</h2><div class="report-content">';
+  content.split('\n\n').forEach(section => {
+    if (section.trim()) {
+      section.split('\n').forEach(line => {
+        if (line.trim()) {
+          if (line.trim().startsWith('-')) {
+            html += `<li>${line.replace(/^-\s*/, '')}</li>`;
+          } else {
+            html += `<p>${line.trim()}</p>`;
+          }
+        }
+      });
+    }
+  });
+  html += '</div></div>';
+
+  document.getElementById('reportContent').innerHTML = html;
+  document.getElementById('reportPreview').classList.add('active');
+  document.getElementById('reportPreview').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function showToast(msg, type = 'success') {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.className = `toast ${type} show`;
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+function showError(msg) {
+  const errorBox = document.getElementById('errorMessage');
+  errorBox.textContent = msg;
+  errorBox.classList.add('show');
+}
+
+function shareReport() {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url);
+  showToast('Link copied!', 'success');
+}
+
+window.addEventListener('DOMContentLoaded', init);
+</script>
+    </main>
+
+    <footer></footer>
+
+    <script src="/JS/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.28.1/dist/supabase.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | JSU Marketing</title>
+    <link rel="stylesheet" href="/CSS/sidebar.css">
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">J</div>
+                <span class="logo-text">JSU Marketing</span>
+            </div>
+            <button class="collapse-btn" id="collapseBtn" aria-label="Toggle sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="menu-section">
+            <h3 class="menu-title">Navigation</h3>
+            <ul class="menu-list">
+                <li class="menu-item active">
+                    <a href="/" class="menu-link" data-menu="dashboard" data-tooltip="Dashboard">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/content-hub/" class="menu-link" data-menu="content" data-tooltip="Content Hub">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span class="menu-text">Content Hub</span>
+                    </a>
+                </li>
+                                <li class="menu-item">
+                    <a href="/content-plan/" class="menu-link" data-menu="upload" data-tooltip="Bulk Upload">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <span class="menu-text">Content Plan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="/caption-generator/" class="menu-link" data-menu="ai" data-tooltip="AI Generator">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 8v4l3 3"></path>
+                        </svg>
+                        <span class="menu-text">AI Generator</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="/clients/" class="menu-link" data-menu="clients" data-tooltip="Clients">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span class="menu-text">Clients</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/analytics-dashboard/" class="menu-link" data-menu="analytics" data-tooltip="Analytics">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                        <span class="menu-text">Analytics</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/report-generator/" class="menu-link" data-menu="reports" data-tooltip="Reports">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                        <span class="menu-text">Reports</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+* { box-sizing: border-box; }
+
+:root {
+  --gold: #FFD700;
+  --gold-2: #FFC700;
+  --gold-dim: rgba(255, 215, 0, .12);
+  --gold-border: rgba(255, 215, 0, .28);
+  --bg-0: #060606;
+  --bg-1: #0e0e0e;
+  --bg-2: #171717;
+  --bg-3: #222;
+  --bg-card: #111;
+  --t1: #f0f0f0;
+  --t2: #aaa;
+  --t3: #666;
+  --border: #252525;
+  --green: #4ade80;
+  --blue: #38bdf8;
+  --purple: #a78bfa;
+  --amber: #fbbf24;
+  --orange: #f97316;
+  --red: #f87171;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg-0);
+  color: var(--t1);
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.page {
+  padding: 20px 32px;
+  max-width: 1440px;
+}
+
+/* Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.header-content h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 2px;
+  letter-spacing: -.5px;
+}
+
+.header-content p {
+  color: var(--t2);
+  margin: 0;
+  font-size: 12px;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 5px;
+  font-size: 10px;
+  color: var(--green);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Search */
+.global-search {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 360px;
+  padding: 8px 12px 8px 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: var(--t1);
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: all .2s;
+}
+
+.search-input::placeholder {
+  color: var(--t3);
+}
+
+.search-input:focus {
+  border-color: var(--gold-border);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, .07);
+}
+
+.search-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--t3);
+  pointer-events: none;
+  width: 14px;
+  height: 14px;
+}
+
+/* Section Title */
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+  letter-spacing: -.2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-2));
+  border-radius: 2px;
+}
+
+/* Actions Grid */
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  text-decoration: none;
+  color: var(--t1);
+  transition: all .2s;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.action-btn:hover {
+  border-color: var(--gold-border);
+  background: rgba(255, 215, 0, .04);
+  transform: translateY(-1px);
+}
+
+.action-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.85;
+  color: var(--gold);
+  stroke-width: 1.5;
+}
+
+.action-label {
+  font-weight: 600;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.content-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 16px;
+}
+
+.content-card h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  letter-spacing: -.2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+.view-all-link {
+  font-size: 10px;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-all-link:hover {
+  color: var(--gold-2);
+}
+
+/* Activity/Schedule Items */
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  padding: 10px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.item:hover {
+  border-color: var(--gold-border);
+  background: rgba(255, 215, 0, .03);
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 11px;
+  margin: 0 0 3px;
+  color: var(--t1);
+}
+
+.item-meta {
+  font-size: 9px;
+  color: var(--t3);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item-badge {
+  display: inline-flex;
+  padding: 2px 6px;
+  background: rgba(99, 102, 241, .2);
+  border-radius: 3px;
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.item-badge.posted {
+  background: rgba(74, 222, 128, .2);
+  color: var(--green);
+}
+
+.item-badge.scheduled {
+  background: rgba(251, 191, 36, .2);
+  color: var(--amber);
+}
+
+.item-stat {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: var(--t3);
+  font-size: 12px;
+}
+
+svg {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+@media (max-width: 1200px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  main { margin-left: 0; }
+  .page { padding: 16px 20px; }
+  .page-header { flex-direction: column; align-items: flex-start; margin-bottom: 16px; }
+  .header-content h1 { font-size: 20px; }
+  .header-content p { font-size: 11px; }
+  .search-input { max-width: 100%; }
+  .actions-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .action-btn { padding: 10px; }
+  .action-label { font-size: 10px; }
+  .content-grid { gap: 10px; }
+  .content-card { padding: 14px; }
+}
+
+@media (max-width: 480px) {
+  .page { padding: 12px 16px; }
+  .page-header { margin-bottom: 12px; }
+  .header-content h1 { font-size: 18px; }
+  .actions-grid { grid-template-columns: repeat(2, 1fr); }
+  .action-label { font-size: 9px; }
+  .content-card { padding: 12px; }
+  .content-card h2 { font-size: 11px; }
+  .item-title { font-size: 10px; }
+  .item-meta { font-size: 8px; }
+}
+</style>
+
+<div class="page">
+  <div class="page-header">
+    <div class="header-content">
+      <h1>Dashboard</h1>
+      <p>Your content overview</p>
+    </div>
+    <div class="status-badge">
+      <span class="status-dot"></span>
+      Systems online
+    </div>
+  </div>
+
+  <div class="global-search">
+    <svg class="search-icon" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input type="text" class="search-input" placeholder="Search (⌘K)" id="searchInput">
+  </div>
+
+  <h2 class="section-title">Quick Access</h2>
+  <div class="actions-grid">
+    <a href="/content-hub/" class="action-btn">
+      <svg class="action-icon" viewBox="0 0 24 24">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+      <div class="action-label">New Content</div>
+    </a>
+
+    <a href="/caption-generator/" class="action-btn">
+      <svg class="action-icon" viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      <div class="action-label">AI Captions</div>
+    </a>
+
+    <a href="/content-plan/" class="action-btn">
+      <svg class="action-icon" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <div class="action-label">Schedule</div>
+    </a>
+
+    <a href="/report-generator/" class="action-btn">
+      <svg class="action-icon" viewBox="0 0 24 24">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+        <polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+      <div class="action-label">Reports</div>
+    </a>
+
+    <a href="/analytics-dashboard/" class="action-btn">
+      <svg class="action-icon" viewBox="0 0 24 24">
+        <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
+        <polyline points="12 12 20 7.5"></polyline>
+        <polyline points="12 12 12 21"></polyline>
+        <polyline points="12 12 4 7.5"></polyline>
+      </svg>
+      <div class="action-label">Analytics</div>
+    </a>
+
+    <a href="/clients/" class="action-btn">
+      <svg class="action-icon" viewBox="0 0 24 24">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+        <circle cx="9" cy="7" r="4"></circle>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+      </svg>
+      <div class="action-label">Clients</div>
+    </a>
+  </div>
+
+  <div class="content-grid">
+    <div class="content-card">
+      <h2>
+        Recent Content
+        <a href="/content-hub/" class="view-all-link">View All</a>
+      </h2>
+      <div class="item-list" id="recentContent"></div>
+    </div>
+
+    <div class="content-card">
+      <h2>
+        Upcoming Schedule
+        <a href="/content-plan/" class="view-all-link">View All</a>
+      </h2>
+      <div class="item-list" id="upcomingSchedule"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Dashboard links to respective sections
+
+  // Search
+  document.addEventListener('keydown', (e) => {
+    if (e.metaKey || e.ctrlKey) {
+      if (e.key === 'k') {
+        e.preventDefault();
+        document.getElementById('searchInput').focus();
+      }
+    }
+  });
+
+  document.getElementById('searchInput').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      const query = e.target.value;
+      console.log('Search:', query);
+    }
+  });
+</script>
+    </main>
+
+    <footer></footer>
+
+    <script src="/JS/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Caption Generator | JSU Marketing</title>
+    <link rel="stylesheet" href="/CSS/sidebar.css">
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">J</div>
+                <span class="logo-text">JSU Marketing</span>
+            </div>
+            <button class="collapse-btn" id="collapseBtn" aria-label="Toggle sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="menu-section">
+            <h3 class="menu-title">Navigation</h3>
+            <ul class="menu-list">
+                <li class="menu-item active">
+                    <a href="/" class="menu-link" data-menu="dashboard" data-tooltip="Dashboard">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/content-hub/" class="menu-link" data-menu="content" data-tooltip="Content Hub">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span class="menu-text">Content Hub</span>
+                    </a>
+                </li>
+                                <li class="menu-item">
+                    <a href="/content-plan/" class="menu-link" data-menu="upload" data-tooltip="Bulk Upload">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <span class="menu-text">Content Plan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="/caption-generator/" class="menu-link" data-menu="ai" data-tooltip="AI Generator">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 8v4l3 3"></path>
+                        </svg>
+                        <span class="menu-text">AI Generator</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="/clients/" class="menu-link" data-menu="clients" data-tooltip="Clients">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span class="menu-text">Clients</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/analytics-dashboard/" class="menu-link" data-menu="analytics" data-tooltip="Analytics">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                        <span class="menu-text">Analytics</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/report-generator/" class="menu-link" data-menu="reports" data-tooltip="Reports">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                        <span class="menu-text">Reports</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+    --gold: #FFD700;
+    --gold-2: #FFC700;
+    --gold-dim: rgba(255, 215, 0, .12);
+    --gold-border: rgba(255, 215, 0, .28);
+    --bg-0: #060606;
+    --bg-1: #0e0e0e;
+    --bg-2: #171717;
+    --bg-3: #222;
+    --bg-card: #111;
+    --t1: #f0f0f0;
+    --t2: #aaa;
+    --t3: #666;
+    --border: #252525;
+    --error: #f87171;
+    --success: #4ade80;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg-0);
+    color: var(--t1);
+    min-height: 100vh;
+}
+
+.page {
+    padding: 36px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ph {
+    margin-bottom: 32px;
+}
+
+.ph h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: -.5px;
+}
+
+.ph p {
+    color: var(--t2);
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Form Styles */
+.cg-form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.fg {
+    margin-bottom: 24px;
+}
+
+.fl {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--t2);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.fi {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-0);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--t1);
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    outline: none;
+    transition: all .2s;
+}
+
+.fi:focus {
+    border-color: var(--gold-border);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, .07);
+}
+
+/* Platform & Tone Toggles */
+.plat-toggles {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.plat-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-0);
+    color: var(--t2);
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s;
+    user-select: none;
+}
+
+.plat-toggle:hover {
+    border-color: var(--gold-border);
+    color: var(--t1);
+}
+
+.plat-toggle.on {
+    border-color: var(--gold);
+    background: var(--gold-dim);
+    color: var(--gold);
+}
+
+.plat-toggle input {
+    display: none;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all .2s;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.gold {
+    background: linear-gradient(135deg, var(--gold), var(--gold-2));
+    color: #0a0a0a;
+    box-shadow: 0 4px 16px rgba(255, 215, 0, .22);
+    width: 100%;
+}
+
+.gold:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 22px rgba(255, 215, 0, .38);
+}
+
+.gold:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.ghost {
+    background: transparent;
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+}
+
+.ghost:hover {
+    background: var(--gold-dim);
+}
+
+/* Results Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all .2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card:hover {
+    border-color: var(--gold-border);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .5);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: transparent;
+    transition: background .25s;
+}
+
+.card:hover::after {
+    background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    background: var(--gold-dim);
+    color: var(--gold);
+    width: fit-content;
+}
+
+.cg-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cg-line:last-child {
+    border-bottom: none;
+}
+
+.cg-line span {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--t1);
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: var(--t3);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all .15s;
+    flex-shrink: 0;
+}
+
+.copy-btn:hover {
+    color: var(--gold);
+    background: var(--bg-3);
+}
+
+/* Error & Loading */
+.cg-error {
+    background: rgba(248, 113, 113, 0.1);
+    border: 1px solid var(--error);
+    border-radius: 8px;
+    padding: 16px;
+    color: var(--error);
+    margin-bottom: 24px;
+    display: none;
+    align-items: center;
+    gap: 12px;
+}
+
+.cg-error.show { display: flex; }
+
+.cg-loading {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 20px;
+}
+
+.cg-loading.show { display: flex; }
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--bg-3);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.cg-loading p {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.results-section {
+    display: none;
+}
+
+.results-section.show {
+    display: block;
+}
+
+.reset-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+</style>
+
+<div class="page">
+    <div class="ph">
+        <h1>AI Caption Generator</h1>
+        <p>Generate high-converting hooks, captions, CTAs, and hashtags.</p>
+    </div>
+
+    <div id="errorMessage" class="cg-error">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span id="errorText"></span>
+    </div>
+
+    <div class="cg-form-card">
+        <form id="captionForm">
+            <div class="fg">
+                <label class="fl">Topic or Description</label>
+                <input type="text" id="topic" class="fi" placeholder="e.g., Morning skincare routine" required>
+            </div>
+
+            <div class="fg">
+                <label class="fl">Platform</label>
+                <div class="plat-toggles">
+                    <label class="plat-toggle on" for="platform-tiktok">
+                        <input type="radio" id="platform-tiktok" name="platform" value="TikTok" checked onchange="updateToggleUI(this, 'platform')">
+                        TikTok
+                    </label>
+                    <label class="plat-toggle" for="platform-instagram">
+                        <input type="radio" id="platform-instagram" name="platform" value="Instagram" onchange="updateToggleUI(this, 'platform')">
+                        Instagram
+                    </label>
+                    <label class="plat-toggle" for="platform-facebook">
+                        <input type="radio" id="platform-facebook" name="platform" value="Facebook" onchange="updateToggleUI(this, 'platform')">
+                        Facebook
+                    </label>
+                </div>
+            </div>
+
+            <div class="fg">
+                <label class="fl">Tone</label>
+                <div class="plat-toggles">
+                    <label class="plat-toggle on" for="tone-casual">
+                        <input type="radio" id="tone-casual" name="tone" value="Casual" checked onchange="updateToggleUI(this, 'tone')">
+                        Casual
+                    </label>
+                    <label class="plat-toggle" for="tone-professional">
+                        <input type="radio" id="tone-professional" name="tone" value="Professional" onchange="updateToggleUI(this, 'tone')">
+                        Professional
+                    </label>
+                    <label class="plat-toggle" for="tone-witty">
+                        <input type="radio" id="tone-witty" name="tone" value="Witty" onchange="updateToggleUI(this, 'tone')">
+                        Witty
+                    </label>
+                </div>
+            </div>
+
+            <div class="fg">
+                <label class="fl">What to Generate</label>
+                <div class="plat-toggles">
+                    <label class="plat-toggle on" for="hooks">
+                        <input type="checkbox" id="hooks" name="types" value="Hooks" checked onchange="this.parentElement.classList.toggle('on', this.checked)">
+                        Hooks
+                    </label>
+                    <label class="plat-toggle on" for="captions">
+                        <input type="checkbox" id="captions" name="types" value="Captions" checked onchange="this.parentElement.classList.toggle('on', this.checked)">
+                        Captions
+                    </label>
+                    <label class="plat-toggle on" for="ctas">
+                        <input type="checkbox" id="ctas" name="types" value="CTAs" checked onchange="this.parentElement.classList.toggle('on', this.checked)">
+                        CTAs
+                    </label>
+                    <label class="plat-toggle on" for="hashtags">
+                        <input type="checkbox" id="hashtags" name="types" value="Hashtags" checked onchange="this.parentElement.classList.toggle('on', this.checked)">
+                        Hashtags
+                    </label>
+                </div>
+            </div>
+
+            <div class="fg">
+                <label class="fl">Number of Variations</label>
+                <input type="number" id="variations" class="fi" min="1" max="10" value="5">
+            </div>
+
+            <button type="submit" class="btn gold" id="generateBtn">Generate Content</button>
+        </form>
+    </div>
+
+    <div id="loadingSpinner" class="cg-loading">
+        <div class="spinner"></div>
+        <p>AI is crafting your content...</p>
+    </div>
+
+    <div id="resultsSection" class="results-section">
+        <div class="grid" id="captionsList"></div>
+        <div class="reset-container">
+            <button class="btn ghost" id="resetBtn" style="width: auto;">Start New Generation</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Helper for UI Toggles
+function updateToggleUI(input, name) {
+    if (input.type === 'radio') {
+        document.querySelectorAll(`input[name="${name}"]`).forEach(inp => {
+            inp.parentElement.classList.toggle('on', inp.checked);
+        });
+    }
+}
+
+// ==== CONFIG ====
+const CONFIG={};
+
+// ==== ELEMENTS ====
+const form=document.getElementById('captionForm');
+const generateBtn=document.getElementById('generateBtn');
+const resetBtn=document.getElementById('resetBtn');
+const resultsSection=document.getElementById('resultsSection');
+const captionsList=document.getElementById('captionsList');
+const errorMessage=document.getElementById('errorMessage');
+const errorText=document.getElementById('errorText');
+const loadingSpinner=document.getElementById('loadingSpinner');
+
+form.addEventListener('submit',handleFormSubmit);
+resetBtn.addEventListener('click',resetForm);
+
+async function handleFormSubmit(e){
+    e.preventDefault();
+    const topic=document.getElementById('topic').value.trim();
+    const platform=document.querySelector('input[name="platform"]:checked').value;
+    const tone=document.querySelector('input[name="tone"]:checked').value;
+    const variations=parseInt(document.getElementById('variations').value);
+    const types=[...document.querySelectorAll('input[name="types"]:checked')].map(c=>c.value);
+    
+    if(types.length===0){showError('Select at least one type.');return;}
+    
+    showLoading(true);
+    hideError();
+    resultsSection.classList.remove('show');
+    
+    try{
+        const result=await generateCaptions(topic,platform,tone,variations,types);
+        displayAll(result);
+        resultsSection.classList.add('show');
+    }catch(err){
+        showError(err.message);
+    }finally{
+        showLoading(false);
+    }
+}
+
+async function generateCaptions(topic,platform,tone,variations,types){
+    const prompt=`Generate exactly ${variations} numbered items for each selected type (${types.join(', ')}) for ${platform}. Topic: "${topic}". Tone: ${tone}. Number each item for each type.`;
+    const res=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt})});
+    if(!res.ok) throw new Error('Generation failed. Please try again.');
+    const data=await res.json();
+    if(data.error) throw new Error(data.error);
+    return parseSections(data.text,variations,types);
+}
+
+function parseSections(content,expectedCount,types){
+    const lines=content.split('\n').map(l=>l.trim()).filter(l=>l&&/^\d/.test(l)).map(l=>l.replace(/^\d+[\.\)\-\s]+/,'').trim());
+    const sections={};
+    let perType=Math.ceil(lines.length/types.length);
+    types.forEach((t,i)=>{sections[t]=lines.slice(i*perType,(i+1)*perType).slice(0,expectedCount);while(sections[t].length<expectedCount) sections[t].push(`No ${t} generated.`);});
+    return sections;
+}
+
+function displayAll(results){
+    captionsList.innerHTML='';
+    for(const type in results){
+        const card=document.createElement('div'); card.className='card';
+        card.innerHTML=`<div class="badge">${type}</div><div class="card-content"></div>`;
+        const contentDiv=card.querySelector('.card-content');
+        results[type].forEach((line,i)=>{
+            const lineEl=document.createElement('div');lineEl.className='cg-line';
+            lineEl.innerHTML=`<span>${i+1}. ${escapeHtml(line)}</span><button class="copy-btn">Copy</button>`;
+            lineEl.querySelector('button').addEventListener('click',function(){
+                navigator.clipboard.writeText(line);
+                this.innerText='Copied!';
+                this.style.color='var(--success)';
+                setTimeout(()=>{
+                    this.innerText='Copy';
+                    this.style.color='var(--t3)';
+                },1000);
+            });
+            contentDiv.appendChild(lineEl);
+        });
+        captionsList.appendChild(card);
+    }
+}
+
+function escapeHtml(text){const map={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'};return text.replace(/[&<>"']/g,m=>map[m]);}
+function resetForm(){form.reset();resultsSection.classList.remove('show');hideError();document.querySelectorAll('.plat-toggle').forEach(t=>{const inp=t.querySelector('input');t.classList.toggle('on', inp.checked);});}
+function showLoading(show){loadingSpinner.classList.toggle('show',show);generateBtn.disabled=show;}
+function showError(msg){errorText.textContent=msg;errorMessage.classList.add('show');}
+function hideError(){errorMessage.classList.remove('show');}
+</script>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="/JS/sidebar.js"></script>
+</body>
+</html>

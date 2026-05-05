@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Plan | JSU Marketing</title>
+    <link rel="stylesheet" href="/CSS/sidebar.css">
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">J</div>
+                <span class="logo-text">JSU Marketing</span>
+            </div>
+            <button class="collapse-btn" id="collapseBtn" aria-label="Toggle sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="menu-section">
+            <h3 class="menu-title">Navigation</h3>
+            <ul class="menu-list">
+                <li class="menu-item active">
+                    <a href="/" class="menu-link" data-menu="dashboard" data-tooltip="Dashboard">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/content-hub/" class="menu-link" data-menu="content" data-tooltip="Content Hub">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span class="menu-text">Content Hub</span>
+                    </a>
+                </li>
+                                <li class="menu-item">
+                    <a href="/content-plan/" class="menu-link" data-menu="upload" data-tooltip="Bulk Upload">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <span class="menu-text">Content Plan</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="/caption-generator/" class="menu-link" data-menu="ai" data-tooltip="AI Generator">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 8v4l3 3"></path>
+                        </svg>
+                        <span class="menu-text">AI Generator</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="/clients/" class="menu-link" data-menu="clients" data-tooltip="Clients">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span class="menu-text">Clients</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/analytics-dashboard/" class="menu-link" data-menu="analytics" data-tooltip="Analytics">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                        <span class="menu-text">Analytics</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/report-generator/" class="menu-link" data-menu="reports" data-tooltip="Reports">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                        <span class="menu-text">Reports</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+*{box-sizing:border-box}
+
+:root{
+  --gold:#FFD700;--gold-2:#FFC700;--gold-dim:rgba(255,215,0,.12);--gold-border:rgba(255,215,0,.28);
+  --bg-0:#060606;--bg-1:#0e0e0e;--bg-2:#171717;--bg-3:#222;--bg-card:#111;
+  --t1:#f0f0f0;--t2:#aaa;--t3:#666;--border:#252525;
+  --green:#4ade80;--blue:#38bdf8;--purple:#a78bfa;--amber:#fbbf24;--orange:#f97316;--slate:#9ca3af;
+  --red:#f87171;--sidebar-w:340px;
+}
+
+body{margin:0;font-family:'DM Sans',sans-serif;background:var(--bg-0);color:var(--t1);min-height:100vh}
+main{margin-left:var(--sidebar-w);min-height:100vh;transition:margin-left .3s ease}
+body.sidebar-collapsed main{margin-left:80px}
+.page{padding:36px 40px;max-width:1200px;margin:0 auto}
+
+.ph{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:28px}
+.ph h1{font-family:'Syne',sans-serif;font-size:32px;font-weight:700;margin:0 0 5px;letter-spacing:-.5px}
+.ph p{color:var(--t2);margin:0;font-size:14px}
+
+.dbs{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--t3);margin-bottom:22px}
+.dbd{width:7px;height:7px;border-radius:50%;background:var(--green);animation:bl 2s ease-in-out infinite}
+.dbd.warn{background:var(--amber);animation:none}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.3}}
+
+.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;gap:16px;flex-wrap:wrap}
+.nav-btn{background:var(--bg-2);border:1px solid var(--border);color:var(--t1);padding:10px 16px;border-radius:8px;font-size:13px;cursor:pointer;transition:all .2s;font-weight:500}
+.nav-btn:hover{border-color:var(--gold-border);color:var(--gold);background:var(--gold-dim)}
+.nav-btn:disabled{opacity:.4;cursor:not-allowed}
+.date-display{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;text-align:center;color:var(--gold);flex:1;min-width:200px}
+
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:40px;margin-bottom:28px}
+.card.current{border-color:var(--gold-border);background:linear-gradient(135deg, rgba(255,215,0,.08), transparent);box-shadow:0 0 30px rgba(255,215,0,.1)}
+
+.header{text-align:center;margin-bottom:40px;padding-bottom:24px;border-bottom:2px solid var(--border)}
+.date-label{font-size:12px;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.title{font-family:'Syne',sans-serif;font-size:24px;font-weight:700;margin:0;color:var(--t1)}
+.subtitle{font-size:13px;color:var(--t2);margin-top:8px}
+
+.client-section{margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+.client-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.client-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--gold);margin:0 0 16px;padding:8px 0;border-bottom:2px solid var(--gold-border);display:inline-block}
+
+.tasks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.task-card{background:var(--bg-2);border:1px solid var(--border);border-radius:10px;padding:20px;transition:all .2s;cursor:pointer;position:relative;overflow:hidden}
+.task-card:hover{border-color:var(--gold-border);background:var(--bg-3)}
+.task-card.completed{border-color:var(--green);background:rgba(74,222,128,.08)}
+.task-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold)}
+.task-card.completed::before{background:var(--green)}
+
+.task-letter{font-family:'Syne',sans-serif;font-size:48px;font-weight:700;color:var(--gold);margin:0;line-height:1}
+.task-letter.completed{color:var(--green)}
+.task-type{font-size:13px;font-weight:600;color:var(--t2);margin:12px 0 16px;text-transform:uppercase;letter-spacing:.5px}
+.task-desc{font-size:13px;line-height:1.6;color:var(--t2);margin-bottom:18px}
+.targets{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.target{background:var(--bg-3);border:1px solid var(--border);padding:4px 10px;border-radius:4px;font-size:11px;color:var(--t3);font-weight:500}
+
+.checkbox{display:flex;align-items:center;gap:12px;padding:12px;background:var(--bg-1);border-radius:8px;cursor:pointer;user-select:none}
+.checkbox input{width:20px;height:20px;cursor:pointer;accent-color:var(--gold)}
+.checkbox label{flex:1;cursor:pointer;font-size:13px;font-weight:500}
+.checkbox.checked{background:rgba(74,222,128,.1)}
+.checkbox.checked input{accent-color:var(--green)}
+
+.progress{margin-top:24px;padding-top:16px;border-top:1px solid var(--border)}
+.progress-title{font-size:10px;text-transform:uppercase;color:var(--t3);font-weight:600;letter-spacing:.5px;margin-bottom:8px}
+.progress-bar{background:var(--bg-1);border-radius:6px;height:6px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg, var(--gold), var(--gold-2));transition:width .3s ease}
+.progress-stats{display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--t3)}
+
+.toast{position:fixed;bottom:24px;right:24px;background:var(--bg-2);border:1px solid var(--gold-border);border-radius:10px;padding:12px 16px;color:var(--t1);font-size:13px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 32px rgba(0,0,0,.55);transform:translateY(120px);opacity:0;transition:all .3s ease;z-index:2000}
+.toast.show{transform:translateY(0);opacity:1}
+
+.modal{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:1000}
+.modal.show{display:flex}
+.modal-content{background:#0e0e0e;border:1px solid #252525;border-radius:12px;padding:28px;max-width:700px;width:90%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;gap:16px}
+.modal-header h2{margin:0;font-family:'Syne',sans-serif;font-size:20px;font-weight:700}
+.modal-close{background:none;border:none;color:#aaa;font-size:26px;cursor:pointer;padding:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;transition:color .2s}
+.modal-close:hover{color:#FFD700}
+
+.date-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:20px}
+.date-box{background:#171717;border:1px solid #252525;border-radius:8px;padding:12px;cursor:pointer;transition:all .2s;text-align:center;user-select:none}
+.date-box:hover{border-color:#FFD700;background:var(--bg-3);box-shadow:0 0 8px rgba(255,215,0,.2)}
+.date-box-label{font-size:10px;color:#666;text-transform:uppercase;font-weight:600;letter-spacing:.5px;margin-bottom:4px}
+.date-box-content{font-size:13px;font-weight:600;color:#FFD700}
+
+.editor{background:#171717;border:1px solid #252525;border-radius:8px;padding:16px;display:none}
+
+@media(max-width:768px){
+  .page{padding:20px}
+  .tasks-grid{grid-template-columns:1fr}
+  .card{padding:20px}
+  .ph{flex-direction:column;gap:14px}
+  .nav{flex-direction:column}
+  .nav-btn{width:100%}
+}
+</style>
+
+<div class="page">
+  <div class="ph">
+    <div>
+      <h1>Content Schedule</h1>
+      <p>Your daily content assignments. Check them off as you complete.</p>
+    </div>
+    <button style="background:var(--bg-2);border:1px solid var(--border);color:var(--t1);padding:10px 16px;border-radius:8px;font-size:13px;cursor:pointer;transition:all .2s;font-weight:500" onclick="openScheduleEditor()" onmouseover="this.style.borderColor='rgba(255,215,0,.28)';this.style.color='#FFD700';this.style.background='rgba(255,215,0,.12)'" onmouseout="this.style.borderColor='#252525';this.style.color='#f0f0f0';this.style.background='#222'">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;margin-right:6px"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      Edit Schedule
+    </button>
+  </div>
+
+  <div class="dbs"><div class="dbd" id="dbd"></div><span id="dbt">Connecting…</span></div>
+
+  <div class="nav">
+    <button class="nav-btn" id="prev-btn" onclick="changeDate(-1)">← Previous</button>
+    <div style="flex:1;text-align:center">
+      <div class="date-display" id="date-display">Feb 17 – Feb 23, 2026</div>
+    </div>
+    <button class="nav-btn" id="next-btn" onclick="changeDate(1)">Next →</button>
+  </div>
+
+  <div class="card" id="main-card">
+    <div class="header">
+      <div class="date-label" id="date-header">February 17 – February 23, 2026</div>
+      <h2 class="title" id="content-pair">A + B</h2>
+      <p class="subtitle" id="content-type">Problem & Result</p>
+    </div>
+
+    <div id="clients-container"></div>
+  </div>
+</div>
+
+<div class="modal" id="schedule-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Edit Content Schedule</h2>
+      <button class="modal-close" onclick="closeScheduleEditor()">×</button>
+    </div>
+    
+    <div style="font-size:12px;color:#aaa;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #252525">
+      <p style="margin:0">1. Choose client (or use Global for all)<br>2. Click a date to edit<br>3. Select content types<br>4. Save when done</p>
+    </div>
+
+    <div style="background:#171717;border:1px solid #252525;border-radius:8px;padding:16px;margin-bottom:16px">
+      <label style="display:block;font-size:11px;text-transform:uppercase;color:#FFD700;margin-bottom:8px;font-weight:600;letter-spacing:.5px">Edit for:</label>
+      <select id="client-select" style="width:100%;background:#0e0e0e;border:1px solid #252525;color:#f0f0f0;padding:10px;border-radius:6px;font-size:13px;cursor:pointer" onchange="switchClient(this.value)">
+        <option value="global">Global Schedule (All Clients)</option>
+        <option value="loading">Loading clients...</option>
+      </select>
+    </div>
+
+    <div class="date-grid" id="date-grid"></div>
+
+    <div class="editor" id="editor-panel">
+      <div id="editor-content"></div>
+    </div>
+
+    <div style="display:flex;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid #252525">
+      <button style="flex:1;background:#222;border:1px solid #252525;color:#f0f0f0;padding:10px 18px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s" onclick="closeScheduleEditor()" onmouseover="this.style.borderColor='rgba(255,215,0,.28)';this.style.color='#FFD700';this.style.background='rgba(255,215,0,.12)'" onmouseout="this.style.borderColor='#252525';this.style.color='#f0f0f0';this.style.background='#222'">Cancel</button>
+      <button style="flex:1;background:linear-gradient(135deg,#FFD700,#FFC700);color:#0a0a0a;padding:10px 18px;border-radius:8px;font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(255,215,0,.22)" onclick="saveAllChanges()" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 6px 22px rgba(255,215,0,.38)'" onmouseout="this.style.transform='none'">Save All Changes</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const SB_URL = 'https://kebpavcsqzuqobhxubzl.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlYnBhdmNzcXp1cW9iaHh1YnpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEzNjY3MzgsImV4cCI6MjA4Njk0MjczOH0.y3V8RFnFiEYRkX1sTxNXZCdY0a-ZicepbzjjVogFe5Q';
+
+const contentTypes = {
+  A: {name: 'Problem', desc: 'Identify pain points. Hook-driven, stops the scroll.', targets: ['Growth']},
+  B: {name: 'Result', desc: 'Show transformation. Aspirational & benefit-focused.', targets: ['Growth', 'Desire']},
+  C: {name: 'Process', desc: 'Explain how it works in 3–4 steps. Builds clarity.', targets: ['Trust']},
+  D: {name: 'Proof', desc: 'Testimonials, stats, years in business. Builds credibility.', targets: ['Trust', 'Sales']},
+  E: {name: 'Insight', desc: 'Educational tips (3–5 points). Built for shares.', targets: ['Growth']},
+  F: {name: 'Call to Action', desc: 'Direct instruction: book, visit, enquire.', targets: ['Sales']}
+};
+
+let rotation = {};
+let clientRotations = {};
+let allClients = [];
+let tasks = [];
+let currentDateIndex = 0;
+let editingMode = 'global';
+let editingRotation = {};
+let isSB = false;
+
+const h = () => ({ 'apikey':SB_KEY, 'Authorization':`Bearer ${SB_KEY}`, 'Content-Type':'application/json', 'Prefer':'return=representation' });
+
+async function sbQ(path, opts={}) {
+  try {
+    const r = await fetch(`${SB_URL}/rest/v1/${path}`, {...opts, headers:{...h(),...(opts.headers||{})}});
+    if (!r.ok) return null;
+    return r.status===204 ? null : await r.json();
+  } catch(e) { return null; }
+}
+
+function setDb(s, msg) {
+  const d = document.getElementById('dbd');
+  d.className = 'dbd';
+  if(s==='warn') d.classList.add('warn');
+  document.getElementById('dbt').textContent = msg;
+}
+
+function getDateIndex() {
+  const today = new Date();
+  const startDate = new Date(2026, 0, 6);
+  if (today < startDate) return 0;
+  const diff = Math.floor((today - startDate) / (7 * 24 * 60 * 60 * 1000));
+  return Math.min(Math.max(diff, 0), 25);
+}
+
+function getDateRange(index) {
+  const startDate = new Date(2026, 0, 6);
+  const rangeStart = new Date(startDate.getTime() + index * 7 * 24 * 60 * 60 * 1000);
+  const rangeEnd = new Date(rangeStart.getTime() + 6 * 24 * 60 * 60 * 1000);
+  const opts = {month:'short', day:'numeric'};
+  return {start: rangeStart.toLocaleDateString('en-US', opts), end: rangeEnd.toLocaleDateString('en-US', opts)};
+}
+
+async function init() {
+  currentDateIndex = getDateIndex();
+  
+  try {
+    const rotData = await sbQ('week_rotation?order=week_num.asc');
+    if (rotData) {
+      rotation = {};
+      rotData.forEach((r, i) => {
+        rotation[i] = [r.letter_1, r.letter_2];
+      });
+    }
+    
+    const clientRotData = await sbQ('client_week_rotation?order=client_name.asc,week_num.asc');
+    if (clientRotData) {
+      clientRotations = {};
+      clientRotData.forEach(r => {
+        if (!clientRotations[r.client_name]) clientRotations[r.client_name] = {};
+        const idx = r.week_num - 1;
+        clientRotations[r.client_name][idx] = [r.letter_1, r.letter_2];
+      });
+    }
+    
+    const clients = await sbQ('clients?select=name&order=name.asc');
+    if (clients) allClients = clients.map(c => c.name);
+    
+    const tasksData = await sbQ('weekly_tasks?order=week_num.asc,client_name.asc');
+    if (tasksData) {
+      tasks = tasksData;
+      isSB = true;
+      setDb('ok', 'Connected');
+    } else {
+      setDb('warn', 'Demo mode');
+    }
+  } catch(e) {
+    setDb('warn', 'Demo mode');
+  }
+  
+  render();
+}
+
+function getPair(idx, client) {
+  if (clientRotations[client] && clientRotations[client][idx]) {
+    return clientRotations[client][idx];
+  }
+  return rotation[idx] || ['A', 'B'];
+}
+
+function render() {
+  const dates = getDateRange(currentDateIndex);
+  const isCurrent = currentDateIndex === getDateIndex();
+  
+  document.getElementById('date-display').textContent = `${dates.start} – ${dates.end}, 2026`;
+  document.getElementById('date-header').textContent = `${dates.start} – ${dates.end}, 2026`;
+  document.getElementById('main-card').classList.toggle('current', isCurrent);
+  
+  const pair = getPair(currentDateIndex, 'all');
+  document.getElementById('content-pair').textContent = `${pair[0]} + ${pair[1]}`;
+  document.getElementById('content-type').textContent = `${contentTypes[pair[0]].name} & ${contentTypes[pair[1]].name}`;
+  
+  const html = allClients.map(client => {
+    const p = getPair(currentDateIndex, client);
+    const cardPair = p.map(l => {
+      const completed = tasks.find(t => t.week_num === currentDateIndex + 1 && t.client_name === client && t.letter === l);
+      return {letter: l, done: completed?.completed || false};
+    });
+    
+    const pct = Math.round((cardPair.filter(x => x.done).length / p.length) * 100);
+    
+    return `
+      <div class="client-section">
+        <h3 class="client-name">${client}</h3>
+        <div class="tasks-grid">
+          ${cardPair.map(({letter, done}) => `
+            <div class="task-card ${done ? 'completed' : ''}" onclick="markTask(${currentDateIndex + 1}, '${client}', '${letter}')">
+              <h3 class="task-letter ${done ? 'completed' : ''}">${letter}</h3>
+              <div class="task-type">${contentTypes[letter].name}</div>
+              <p class="task-desc">${contentTypes[letter].desc}</p>
+              <div class="targets">${contentTypes[letter].targets.map(t => `<span class="target">${t}</span>`).join('')}</div>
+              <div class="checkbox ${done ? 'checked' : ''}"><input type="checkbox" ${done ? 'checked' : ''} onclick="event.stopPropagation()"><label>Done</label></div>
+            </div>
+          `).join('')}
+        </div>
+        <div class="progress">
+          <div class="progress-title">Progress</div>
+          <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+          <div class="progress-stats"><span>${cardPair.filter(x => x.done).length}/${p.length}</span><span>${pct}%</span></div>
+        </div>
+      </div>
+    `;
+  }).join('');
+  
+  document.getElementById('clients-container').innerHTML = html;
+  document.getElementById('prev-btn').disabled = currentDateIndex <= 0;
+  document.getElementById('next-btn').disabled = currentDateIndex >= 25;
+}
+
+function changeDate(dir) {
+  currentDateIndex += dir;
+  currentDateIndex = Math.max(0, Math.min(25, currentDateIndex));
+  render();
+}
+
+async function markTask(n, client, letter) {
+  const task = tasks.find(t => t.week_num === n && t.client_name === client && t.letter === letter);
+  const newDone = !task?.completed;
+  
+  try {
+    if (task) {
+      await sbQ(`weekly_tasks?week_num=eq.${n}&client_name=eq.${encodeURIComponent(client)}&letter=eq.${letter}`, {
+        method: 'PATCH',
+        body: JSON.stringify({completed: newDone})
+      });
+      task.completed = newDone;
+    } else {
+      await sbQ('weekly_tasks', {
+        method: 'POST',
+        body: JSON.stringify({week_num: n, client_name: client, letter, completed: newDone})
+      });
+      tasks.push({week_num: n, client_name: client, letter, completed: newDone});
+    }
+  } catch(e) {
+    toast('Error saving');
+    return;
+  }
+  
+  render();
+  toast(newDone ? `✓ ${client} - ${letter} done!` : `${client} - ${letter} unmarked`);
+}
+
+function openScheduleEditor() {
+  editingMode = 'global';
+  editingRotation = JSON.parse(JSON.stringify(rotation));
+  
+  const select = document.getElementById('client-select');
+  select.innerHTML = '<option value="global">Global Schedule (All Clients)</option>' + 
+    allClients.map(c => `<option value="${c}">${c} (Custom)</option>`).join('');
+  
+  const grid = document.getElementById('date-grid');
+  grid.innerHTML = Array.from({length: 26}, (_, i) => {
+    const dates = getDateRange(i);
+    const pair = editingMode === 'global' ? editingRotation[i] : (editingRotation[i] || rotation[i]);
+    return `
+      <div class="date-box" onclick="editDate(${i})">
+        <div class="date-box-label">${dates.start} - ${dates.end}</div>
+        <div class="date-box-content">${pair[0]}+${pair[1]}</div>
+      </div>
+    `;
+  }).join('');
+  
+  document.getElementById('schedule-modal').classList.add('show');
+}
+
+function switchClient(val) {
+  editingMode = val;
+  editingRotation = val === 'global' ? JSON.parse(JSON.stringify(rotation)) : JSON.parse(JSON.stringify(clientRotations[val] || {}));
+  
+  document.getElementById('editor-panel').style.display = 'none';
+  
+  const grid = document.getElementById('date-grid');
+  Array.from({length: 26}, (_, i) => {
+    const dates = getDateRange(i);
+    const pair = editingRotation[i] || rotation[i];
+    const box = grid.children[i];
+    if (box) box.querySelector('.date-box-content').textContent = `${pair[0]}+${pair[1]}`;
+  });
+}
+
+function editDate(idx) {
+  const pair = editingRotation[idx] || rotation[idx];
+  const dates = getDateRange(idx);
+  
+  const html = `
+    <div style="margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid #252525">
+      <div style="font-size:13px;font-weight:600;color:#FFD700;margin-bottom:4px">${dates.start} – ${dates.end}, 2026</div>
+      <div style="font-size:11px;color:#666">Select content types</div>
+    </div>
+    <div style="margin-bottom:16px">
+      <label style="display:block;font-size:11px;text-transform:uppercase;color:#FFD700;margin-bottom:8px;font-weight:600;letter-spacing:.5px">First</label>
+      <select id="l1" style="width:100%;background:#0e0e0e;border:1px solid #252525;color:#f0f0f0;padding:10px;border-radius:6px;font-size:13px;cursor:pointer">
+        ${['A','B','C','D','E','F'].map(l => `<option value="${l}" ${pair[0]===l?'selected':''}>${l} - ${contentTypes[l].name}</option>`).join('')}
+      </select>
+    </div>
+    <div style="margin-bottom:16px">
+      <label style="display:block;font-size:11px;text-transform:uppercase;color:#FFD700;margin-bottom:8px;font-weight:600;letter-spacing:.5px">Second</label>
+      <select id="l2" style="width:100%;background:#0e0e0e;border:1px solid #252525;color:#f0f0f0;padding:10px;border-radius:6px;font-size:13px;cursor:pointer">
+        ${['A','B','C','D','E','F'].map(l => `<option value="${l}" ${pair[1]===l?'selected':''}>${l} - ${contentTypes[l].name}</option>`).join('')}
+      </select>
+    </div>
+    <button style="width:100%;background:var(--gold);color:#0a0a0a;padding:10px;border:none;border-radius:6px;font-weight:600;cursor:pointer;transition:all .2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'" onclick="saveDateEdit(${idx})">Save</button>
+  `;
+  
+  document.getElementById('editor-content').innerHTML = html;
+  document.getElementById('editor-panel').style.display = 'block';
+}
+
+function saveDateEdit(idx) {
+  const l1 = document.getElementById('l1').value;
+  const l2 = document.getElementById('l2').value;
+  
+  if (l1 === l2) {
+    toast('Pick 2 different types');
+    return;
+  }
+  
+  editingRotation[idx] = [l1, l2];
+  const dates = getDateRange(idx);
+  
+  const grid = document.getElementById('date-grid');
+  if (grid.children[idx]) {
+    grid.children[idx].querySelector('.date-box-content').textContent = `${l1}+${l2}`;
+  }
+  
+  document.getElementById('editor-panel').style.display = 'none';
+  toast(`✓ ${dates.start} – ${dates.end} updated`);
+}
+
+async function saveAllChanges() {
+  try {
+    if (editingMode === 'global') {
+      for (let i = 0; i < 26; i++) {
+        const pair = editingRotation[i];
+        if (!pair) continue;
+        
+        const exists = rotation[i];
+        if (exists) {
+          await sbQ(`week_rotation?week_num=eq.${i + 1}`, {
+            method: 'PATCH',
+            body: JSON.stringify({letter_1: pair[0], letter_2: pair[1]})
+          });
+        } else {
+          await sbQ('week_rotation', {
+            method: 'POST',
+            body: JSON.stringify({week_num: i + 1, letter_1: pair[0], letter_2: pair[1]})
+          });
+        }
+      }
+      rotation = JSON.parse(JSON.stringify(editingRotation));
+    } else {
+      const client = editingMode;
+      for (let i = 0; i < 26; i++) {
+        const pair = editingRotation[i];
+        if (pair) {
+          const exists = clientRotations[client]?.[i];
+          if (exists) {
+            await sbQ(`client_week_rotation?client_name=eq.${encodeURIComponent(client)}&week_num=eq.${i + 1}`, {
+              method: 'PATCH',
+              body: JSON.stringify({letter_1: pair[0], letter_2: pair[1]})
+            });
+          } else {
+            await sbQ('client_week_rotation', {
+              method: 'POST',
+              body: JSON.stringify({client_name: client, week_num: i + 1, letter_1: pair[0], letter_2: pair[1]})
+            });
+          }
+        }
+      }
+      if (!clientRotations[client]) clientRotations[client] = {};
+      Object.assign(clientRotations[client], editingRotation);
+    }
+    
+    closeScheduleEditor();
+    render();
+    toast(`✓ Schedule saved for ${editingMode === 'global' ? 'all' : editingMode}!`);
+  } catch(e) {
+    toast('Error saving');
+  }
+}
+
+function closeScheduleEditor() {
+  document.getElementById('schedule-modal').classList.remove('show');
+}
+
+document.addEventListener('keydown', e => {if(e.key==='Escape') closeScheduleEditor()});
+document.getElementById('schedule-modal').addEventListener('click', e => {if(e.target.id==='schedule-modal') closeScheduleEditor()});
+
+init();
+</script>
+    </main>
+
+    <footer></footer>
+
+    <script src="/JS/sidebar.js"></script>
+</body>
+</html>
