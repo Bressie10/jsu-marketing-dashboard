@@ -1,5 +1,5 @@
-const MODELS = ['gemini-2.0-flash-lite', 'gemini-2.0-flash'];
-const BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
+const MODELS = ['llama-3.3-70b-versatile', 'llama-3.1-8b-instant'];
+const URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 module.exports = async function handler(req, res) {
   try {
@@ -20,7 +20,7 @@ module.exports = async function handler(req, res) {
     const { prompt, task } = body;
     if (!prompt) return res.status(400).json({ error: 'Missing prompt' });
 
-    const envName = task === 'report' ? 'GEMINI_API_KEY_REPORTS' : 'GEMINI_API_KEY_CAPTIONS';
+    const envName = task === 'report' ? 'GROQ_API_KEY_REPORTS' : 'GROQ_API_KEY_CAPTIONS';
     const key = process.env[envName];
     if (!key) {
       return res.status(500).json({ error: `Env var ${envName} is not set on Vercel` });
@@ -29,15 +29,21 @@ module.exports = async function handler(req, res) {
     const errors = [];
     for (const model of MODELS) {
       try {
-        const response = await fetch(`${BASE}/${model}:generateContent?key=${key}`, {
+        const response = await fetch(URL, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${key}`
+          },
+          body: JSON.stringify({
+            model,
+            messages: [{ role: 'user', content: prompt }]
+          })
         });
 
         if (response.ok) {
           const data = await response.json();
-          const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+          const text = data.choices?.[0]?.message?.content || '';
           return res.status(200).json({ text });
         }
 
