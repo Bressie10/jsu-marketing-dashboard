@@ -579,7 +579,7 @@ async function handleFormSubmit(e){
 
 async function generateCaptions(topic,platform,tone,variations,types){
     const prompt=`Generate exactly ${variations} numbered items for each selected type (${types.join(', ')}) for ${platform}. Topic: "${topic}". Tone: ${tone}. Number each item for each type.`;
-    const res=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt})});
+    const res=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,task:'caption'})});
     if(!res.ok) throw new Error('Generation failed. Please try again.');
     const data=await res.json();
     if(data.error) throw new Error(data.error);
