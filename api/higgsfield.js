@@ -91,7 +91,7 @@ module.exports = async function handler(req, res) {
       const { id } = body;
       if (!id) return res.status(400).json({ error: "Missing id" });
 
-      const r = awaitfetch(`${BASE}/requests/${encodeURIComponent(id)}/status`, {
+      const r = await fetch(`${BASE}/requests/${encodeURIComponent(id)}/status`, {
 	        method: "GET",
         headers,
       });
@@ -121,7 +121,7 @@ module.exports = async function handler(req, res) {
       const { id } = body;
       if (!id) return res.status(400).json({ error: "Missing id" });
 
-      const r = awaitfetch(`${BASE}/requests/${encodeURIComponent(id)}/cancel`, {
+      const r = await fetch(`${BASE}/requests/${encodeURIComponent(id)}/cancel`, {
 	        method: "DELETE",
         headers,
       });
