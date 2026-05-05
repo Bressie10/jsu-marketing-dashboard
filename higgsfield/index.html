@@ -3788,6 +3788,46 @@
 
         <footer></footer>
 
+        <script>
+            const tabs = document.querySelectorAll(".hf-tab");
+            const tabContents = document.querySelectorAll(".tab-content");
+
+            function updateFormState(activeTab) {
+                tabContents.forEach((tab) => {
+                    const inputs = tab.querySelectorAll(
+                        "input, textarea, select",
+                    );
+
+                    if (tab.dataset.content === activeTab) {
+                        tab.classList.add("active");
+                        tab.style.display = "block";
+
+                        inputs.forEach((i) => (i.disabled = false));
+                    } else {
+                        tab.classList.remove("active");
+                        tab.style.display = "none";
+
+                        inputs.forEach((i) => (i.disabled = true));
+                    }
+                });
+            }
+
+            // Tab click handling
+            tabs.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    // remove active state from buttons
+                    tabs.forEach((b) => b.classList.remove("active"));
+
+                    // activate clicked tab
+                    btn.classList.add("active");
+
+                    const tabName = btn.dataset.tab;
+                    updateFormState(tabName);
+                });
+            });
+
+            updateFormState("image");
+        </script>
         <script src="/JS/sidebar.js"></script>
     </body>
 </html>
