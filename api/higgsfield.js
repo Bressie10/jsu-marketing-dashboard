@@ -20,30 +20,8 @@ const BASE = process.env.HIGGSFIELD_API_BASE || 'https://api.higgsfield.ai/v1';
 const KEY_NAME = 'HIGGSFIELD_API_KEY';
 
 module.exports = async function handler(req, res) {
-    try {
-        if (req.method !== 'POST') {
-            return res.status(405).json({ error: 'Method not allowed' });
-        }
-
-        let body = req.body;
-        if (typeof body === 'string') {
-            try { body = JSON.parse(body); }
-            catch { return res.status(400).json({ error: 'Invalid JSON body' }); }
-        }
-        if (!body || typeof body !== 'object') {
-            return res.status(400).json({ error: 'Missing body' });
-        }
-
-        const key = process.env[KEY_NAME];
-        if (!key) {
-            return res.status(500).json({ error: `${KEY_NAME} is not set on Vercel` });
-        }
-
-        const headers = {
-            'Authorization': `Bearer ${key}`,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        };
+    return res.json({ ok: true });
+};
 
         const { op } = body;
 
