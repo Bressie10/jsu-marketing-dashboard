@@ -2,7 +2,7 @@
  * Higgsfield API proxy — Vercel serverless function.
  */
 
-const BASE = process.env.HIGGSFIELD_API_BASE || "https://api.higgsfield.ai/v1";
+const BASE = process.env.HIGGSFIELD_API_BASE || "https://platform.higgsfield.ai";
 const KEY_NAME = "HIGGSFIELD_API_KEY";
 
 module.exports = async function handler(req, res) {
@@ -33,7 +33,7 @@ module.exports = async function handler(req, res) {
     }
 
     const headers = {
-      Authorization: `Bearer ${key}`,
+      Authorization: `Key ${key}`,
       "Content-Type": "application/json",
       Accept: "application/json",
     };
@@ -47,12 +47,12 @@ module.exports = async function handler(req, res) {
 
     // ✅ SUBMIT GENERATION
     if (op === "submit") {
-      const { task, model, params } = body;
-      if (!task) return res.status(400).json({ error: "Missing task" });
+      const { application, arguments: args } = body;
+      if (!application) return res.status(400).json({ error: "Missing application" });
 
-      const upstreamBody = { task, model, ...(params || {}) };
+      const upstreamBody = { application, arguments: args || {} };
 
-      const r = await fetch(`${BASE}/generations`, {
+      const r = await fetch(`${BASE}/requests`, {
         method: "POST",
         headers,
         body: JSON.stringify(upstreamBody),
@@ -91,8 +91,8 @@ module.exports = async function handler(req, res) {
       const { id } = body;
       if (!id) return res.status(400).json({ error: "Missing id" });
 
-      const r = await fetch(`${BASE}/generations/${encodeURIComponent(id)}`, {
-        method: "GET",
+      const r = awaitfetch(`${BASE}/requests/${encodeURIComponent(id)}/status`, {
+	        method: "GET",
         headers,
       });
 
@@ -121,8 +121,8 @@ module.exports = async function handler(req, res) {
       const { id } = body;
       if (!id) return res.status(400).json({ error: "Missing id" });
 
-      const r = await fetch(`${BASE}/generations/${encodeURIComponent(id)}`, {
-        method: "DELETE",
+      const r = awaitfetch(`${BASE}/requests/${encodeURIComponent(id)}/cancel`, {
+	        method: "DELETE",
         headers,
       });
 
