@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevenLabs Studio | JSU Marketing</title>
+    <link rel="stylesheet" href="/CSS/sidebar.css">
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">J</div>
+                <span class="logo-text">JSU Marketing</span>
+            </div>
+            <button class="collapse-btn" id="collapseBtn" aria-label="Toggle sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+        </div>
+        <div class="menu-section">
+            <h3 class="menu-title">Navigation</h3>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <a href="/" class="menu-link" data-menu="dashboard" data-tooltip="Dashboard">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/content-hub/" class="menu-link" data-menu="content" data-tooltip="Content Hub">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        <span class="menu-text">Content Hub</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/content-plan/" class="menu-link" data-menu="upload" data-tooltip="Content Plan">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        <span class="menu-text">Content Plan</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/caption-generator/" class="menu-link" data-menu="ai" data-tooltip="AI Generator">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                        <span class="menu-text">AI Generator</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/higgsfield/" class="menu-link" data-menu="higgsfield" data-tooltip="Higgsfield">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 10l-4.7 3.4L17 20l-5-3.5L7 20l1.7-6.6L4 10l6.1-1.2z"></path></svg>
+                        <span class="menu-text">Higgsfield</span>
+                    </a>
+                </li>
+                <li class="menu-item active">
+                    <a href="/elevenlabs/" class="menu-link" data-menu="elevenlabs" data-tooltip="ElevenLabs">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                        <span class="menu-text">ElevenLabs</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/clients/" class="menu-link" data-menu="clients" data-tooltip="Clients">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span class="menu-text">Clients</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/analytics-dashboard/" class="menu-link" data-menu="analytics" data-tooltip="Analytics">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        <span class="menu-text">Analytics</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/report-generator/" class="menu-link" data-menu="reports" data-tooltip="Reports">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                        <span class="menu-text">Reports</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+    --gold: #FFD700;
+    --gold-2: #FFC700;
+    --gold-dim: rgba(255, 215, 0, .12);
+    --gold-border: rgba(255, 215, 0, .28);
+    --bg-0: #060606;
+    --bg-1: #0e0e0e;
+    --bg-2: #171717;
+    --bg-3: #222;
+    --bg-card: #111;
+    --t1: #f0f0f0;
+    --t2: #aaa;
+    --t3: #666;
+    --border: #252525;
+    --error: #f87171;
+    --success: #4ade80;
+    --warning: #fbbf24;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; font-family: 'DM Sans', sans-serif; background: var(--bg-0); color: var(--t1); min-height: 100vh; }
+
+.page { padding: 36px 40px 120px; max-width: 1300px; margin: 0 auto; }
+
+.ph { margin-bottom: 28px; }
+.ph h1 { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 700; margin: 0 0 6px; letter-spacing: -.5px; }
+.ph p { color: var(--t2); margin: 0; font-size: 15px; }
+
+/* Tabs */
+.tab-nav { display: flex; gap: 4px; margin-bottom: 28px; border-bottom: 1px solid var(--border); padding-bottom: 0; flex-wrap: wrap; }
+.tab-btn {
+    background: none; border: none; color: var(--t3); font-family: 'DM Sans', sans-serif; font-size: 13px;
+    font-weight: 600; padding: 10px 16px; cursor: pointer; border-bottom: 2px solid transparent;
+    margin-bottom: -1px; transition: all .2s; text-transform: uppercase; letter-spacing: .5px; white-space: nowrap;
+}
+.tab-btn:hover { color: var(--t2); }
+.tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Form Elements */
+.fg { margin-bottom: 20px; }
+.fl { display: block; font-size: 12px; font-weight: 600; color: var(--t2); margin-bottom: 8px; text-transform: uppercase; letter-spacing: .5px; }
+.fi { width: 100%; padding: 10px 14px; background: var(--bg-0); border: 1px solid var(--border); border-radius: 8px; color: var(--t1); font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: all .2s; }
+.fi:focus { border-color: var(--gold-border); box-shadow: 0 0 0 3px rgba(255,215,0,.07); }
+select.fi { cursor: pointer; }
+textarea.fi { resize: vertical; line-height: 1.6; }
+
+/* Card */
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; position: relative; transition: all .2s; }
+.card:hover { border-color: #333; }
+.card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: transparent; border-radius: 12px 12px 0 0; transition: background .25s; }
+.card.gold-top::after { background: linear-gradient(90deg, var(--gold), transparent); }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 22px; border-radius: 8px; font-size: 13px; font-family: 'DM Sans', sans-serif; font-weight: 700; cursor: pointer; border: none; transition: all .2s; text-transform: uppercase; letter-spacing: .5px; }
+.btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-2)); color: #0a0a0a; box-shadow: 0 4px 16px rgba(255,215,0,.2); width: 100%; }
+.btn-gold:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 22px rgba(255,215,0,.35); }
+.btn-gold:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+.btn-ghost { background: transparent; border: 1px solid var(--gold-border); color: var(--gold); }
+.btn-ghost:hover:not(:disabled) { background: var(--gold-dim); }
+.btn-ghost:disabled { opacity: .4; cursor: not-allowed; }
+.btn-sm { padding: 7px 14px; font-size: 12px; width: auto; }
+.btn-danger { background: transparent; border: 1px solid rgba(248,113,113,.3); color: var(--error); }
+.btn-danger:hover { background: rgba(248,113,113,.1); }
+
+/* Badge */
+.badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: .4px; background: var(--gold-dim); color: var(--gold); }
+.badge-gray { background: rgba(255,255,255,.05); color: var(--t3); }
+.badge-green { background: rgba(74,222,128,.1); color: var(--success); }
+
+/* Slider */
+.slider-group { margin-bottom: 16px; }
+.slider-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.slider-label { font-size: 12px; color: var(--t2); width: 160px; flex-shrink: 0; }
+.slider { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; background: var(--bg-3); border-radius: 2px; outline: none; cursor: pointer; }
+.slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--gold); cursor: pointer; transition: transform .15s; }
+.slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+.slider-val { font-size: 12px; color: var(--gold); font-weight: 600; width: 38px; text-align: right; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+
+/* Toggle switch */
+.toggle-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.toggle { position: relative; display: inline-block; width: 40px; height: 22px; flex-shrink: 0; margin-left: auto; }
+.toggle input { opacity: 0; width: 0; height: 0; }
+.toggle-track { position: absolute; inset: 0; background: var(--bg-3); border-radius: 22px; transition: .2s; cursor: pointer; }
+.toggle-track::before { content: ''; position: absolute; height: 16px; width: 16px; left: 3px; bottom: 3px; background: var(--t3); border-radius: 50%; transition: .2s; }
+.toggle input:checked + .toggle-track { background: var(--gold-dim); border: 1px solid var(--gold-border); }
+.toggle input:checked + .toggle-track::before { background: var(--gold); transform: translateX(18px); }
+
+/* TTS Layout */
+.studio-layout { display: grid; grid-template-columns: 1fr 360px; gap: 20px; }
+@media (max-width: 900px) { .studio-layout { grid-template-columns: 1fr; } }
+
+.text-editor { position: relative; }
+.text-area { min-height: 280px; font-size: 15px; line-height: 1.7; }
+.char-row { display: flex; justify-content: flex-end; margin-top: 8px; }
+.char-count { font-size: 12px; color: var(--t3); }
+.char-count.warn { color: var(--warning); }
+.char-count.over { color: var(--error); }
+
+/* Voice Library */
+.lib-controls { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; }
+.lib-search { flex: 1; min-width: 200px; }
+.filter-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--t3); font-size: 12px; font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; transition: all .15s; }
+.chip:hover { border-color: var(--gold-border); color: var(--t2); }
+.chip.active { border-color: var(--gold); background: var(--gold-dim); color: var(--gold); }
+
+.voices-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.voice-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; transition: all .2s; }
+.voice-card:hover { border-color: #333; box-shadow: 0 4px 20px rgba(0,0,0,.4); }
+.voice-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+.voice-name { font-size: 15px; font-weight: 600; font-family: 'Syne', sans-serif; }
+.voice-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.voice-actions { display: flex; gap: 8px; }
+.star-btn { background: none; border: none; color: var(--t3); cursor: pointer; font-size: 18px; line-height: 1; padding: 2px; transition: all .15s; flex-shrink: 0; }
+.star-btn:hover { color: var(--gold); }
+.star-btn.starred { color: var(--gold); }
+
+/* Dropzone */
+.dropzone { border: 2px dashed var(--border); border-radius: 10px; padding: 40px 20px; text-align: center; cursor: pointer; transition: all .2s; position: relative; }
+.dropzone:hover, .dropzone.over { border-color: var(--gold-border); background: var(--gold-dim); }
+.dropzone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+.dropzone-icon { color: var(--t3); margin-bottom: 10px; }
+.dropzone p { margin: 0; color: var(--t2); font-size: 14px; }
+.dropzone span { font-size: 12px; color: var(--t3); display: block; margin-top: 6px; }
+
+.file-list { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.file-item { display: flex; align-items: center; gap: 10px; background: var(--bg-2); border-radius: 6px; padding: 8px 12px; font-size: 13px; }
+.file-item span { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--t2); }
+.file-remove { background: none; border: none; color: var(--t3); cursor: pointer; font-size: 16px; line-height: 1; padding: 0; transition: color .15s; }
+.file-remove:hover { color: var(--error); }
+
+/* Tags input */
+.tags-input { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 10px; background: var(--bg-0); border: 1px solid var(--border); border-radius: 8px; min-height: 42px; cursor: text; transition: all .2s; }
+.tags-input:focus-within { border-color: var(--gold-border); box-shadow: 0 0 0 3px rgba(255,215,0,.07); }
+.tag { display: flex; align-items: center; gap: 5px; background: var(--gold-dim); border: 1px solid var(--gold-border); color: var(--gold); border-radius: 4px; padding: 2px 8px; font-size: 12px; font-weight: 500; }
+.tag button { background: none; border: none; color: var(--gold); cursor: pointer; font-size: 14px; line-height: 1; padding: 0; opacity: .7; }
+.tag button:hover { opacity: 1; }
+.tags-input input { flex: 1; min-width: 100px; background: none; border: none; outline: none; color: var(--t1); font-size: 13px; font-family: 'DM Sans', sans-serif; padding: 2px 4px; }
+
+/* Two-column form layout */
+.form-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 700px) { .form-cols { grid-template-columns: 1fr; } }
+
+/* History */
+.history-list { display: flex; flex-direction: column; gap: 10px; }
+.history-item { display: flex; align-items: center; gap: 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; transition: all .2s; }
+.history-item:hover { border-color: #333; }
+.history-play { background: none; border: 1px solid var(--border); color: var(--t2); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all .15s; }
+.history-play:hover { border-color: var(--gold); color: var(--gold); }
+.history-info { flex: 1; min-width: 0; }
+.history-text { font-size: 14px; color: var(--t1); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-bottom: 4px; }
+.history-meta { font-size: 12px; color: var(--t3); display: flex; gap: 10px; flex-wrap: wrap; }
+.history-actions { display: flex; gap: 8px; flex-shrink: 0; }
+
+/* Usage stats */
+.usage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.usage-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+.usage-stat-label { font-size: 12px; color: var(--t3); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+.usage-stat-val { font-size: 28px; font-weight: 700; font-family: 'Syne', sans-serif; color: var(--gold); }
+.usage-stat-sub { font-size: 12px; color: var(--t3); margin-top: 4px; }
+.usage-bar-wrap { margin-top: 12px; }
+.usage-bar-track { background: var(--bg-3); border-radius: 4px; height: 6px; overflow: hidden; }
+.usage-bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-2)); border-radius: 4px; transition: width .4s ease; }
+
+/* Loading state */
+.loading-row { display: flex; align-items: center; gap: 12px; color: var(--t3); font-size: 14px; padding: 20px 0; }
+.spinner { width: 20px; height: 20px; border: 2px solid var(--bg-3); border-top-color: var(--gold); border-radius: 50%; animation: spin .7s linear infinite; flex-shrink: 0; }
+.spinner-lg { width: 36px; height: 36px; border-width: 3px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.loading-center { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; gap: 16px; }
+.loading-center p { color: var(--gold); font-weight: 600; font-size: 14px; margin: 0; }
+
+/* Error banner */
+.error-banner { display: none; align-items: center; gap: 12px; background: rgba(248,113,113,.08); border: 1px solid rgba(248,113,113,.3); border-radius: 8px; padding: 14px 16px; color: var(--error); font-size: 14px; margin-bottom: 20px; }
+.error-banner.show { display: flex; }
+
+/* Section divider */
+.section-title { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--t2); margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+
+/* Empty state */
+.empty-state { text-align: center; padding: 60px 20px; color: var(--t3); }
+.empty-state svg { margin-bottom: 14px; opacity: .3; }
+.empty-state p { font-size: 15px; margin: 0; }
+
+/* Mic recording indicator */
+.rec-indicator { display: inline-flex; align-items: center; gap: 8px; color: var(--error); font-size: 13px; font-weight: 600; }
+.rec-dot { width: 8px; height: 8px; background: var(--error); border-radius: 50%; animation: pulse 1s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+
+/* Audio Player Bar */
+.audio-player-bar {
+    position: fixed; bottom: 0; right: 0; left: 0; z-index: 100;
+    background: #0d0d0d; border-top: 1px solid var(--border);
+    padding: 0 40px; display: none; align-items: center; gap: 16px; height: 72px;
+    box-shadow: 0 -8px 30px rgba(0,0,0,.6);
+}
+.audio-player-bar.visible { display: flex; }
+.player-label-wrap { display: flex; flex-direction: column; min-width: 120px; flex-shrink: 0; }
+.player-label { font-size: 12px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: .5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.player-sublabel { font-size: 11px; color: var(--t3); }
+.player-play-btn { width: 40px; height: 40px; border-radius: 50%; background: var(--gold); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform .15s; }
+.player-play-btn:hover { transform: scale(1.08); }
+.player-progress-wrap { flex: 1; display: flex; align-items: center; gap: 10px; min-width: 0; }
+.player-time { font-size: 12px; color: var(--t3); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.player-progress { flex: 1; height: 4px; background: var(--bg-3); border-radius: 2px; cursor: pointer; position: relative; overflow: hidden; }
+.player-progress-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-2)); border-radius: 2px; width: 0%; transition: width .1s linear; }
+.waveform-canvas { height: 40px; width: 180px; flex-shrink: 0; opacity: .8; }
+@media (max-width: 700px) { .waveform-canvas { display: none; } }
+.player-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.player-action-btn { background: none; border: 1px solid var(--border); color: var(--t2); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-family: 'DM Sans', sans-serif; font-weight: 600; cursor: pointer; transition: all .15s; display: flex; align-items: center; gap: 6px; }
+.player-action-btn:hover { border-color: var(--gold-border); color: var(--gold); }
+.player-close-btn { background: none; border: none; color: var(--t3); cursor: pointer; font-size: 20px; line-height: 1; padding: 4px; transition: color .15s; }
+.player-close-btn:hover { color: var(--t1); }
+
+/* Toasts */
+.toasts-container { position: fixed; top: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; pointer-events: none; }
+.toast { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; font-size: 13px; color: var(--t1); pointer-events: all; animation: slideIn .25s ease; box-shadow: 0 4px 20px rgba(0,0,0,.5); display: flex; align-items: center; gap: 10px; max-width: 320px; }
+.toast.success { border-color: rgba(74,222,128,.3); }
+.toast.error { border-color: rgba(248,113,113,.3); }
+.toast.success .toast-dot { background: var(--success); }
+.toast.error .toast-dot { background: var(--error); }
+.toast-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+@keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .page { padding: 20px 16px 100px; }
+    .ph h1 { font-size: 28px; }
+    .tab-btn { font-size: 11px; padding: 8px 10px; }
+    .audio-player-bar { padding: 0 16px; }
+    .player-label-wrap { display: none; }
+}
+</style>
+
+<div class="page">
+    <div class="ph">
+        <h1>ElevenLabs Studio</h1>
+        <p>Text-to-speech, voice cloning, sound effects, and audio processing.</p>
+    </div>
+
+    <!-- Tab navigation -->
+    <div class="tab-nav">
+        <button class="tab-btn active" data-tab="tts">TTS Studio</button>
+        <button class="tab-btn" data-tab="voices">Voice Library</button>
+        <button class="tab-btn" data-tab="clone">Voice Cloning</button>
+        <button class="tab-btn" data-tab="sfx">Sound Effects</button>
+        <button class="tab-btn" data-tab="s2s">Speech-to-Speech</button>
+        <button class="tab-btn" data-tab="isolation">Audio Isolation</button>
+        <button class="tab-btn" data-tab="history">History</button>
+    </div>
+
+    <!-- ========== TTS STUDIO ========== -->
+    <div id="tab-tts" class="tab-panel active">
+        <div id="ttsError" class="error-banner">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="ttsErrorText"></span>
+        </div>
+        <div class="studio-layout">
+            <div>
+                <div class="card">
+                    <div class="fg" style="margin-bottom:8px">
+                        <label class="fl">Text</label>
+                    </div>
+                    <textarea id="ttsText" class="fi text-area" placeholder="Enter text to convert to speech&#8230;" rows="12" maxlength="5000"></textarea>
+                    <div class="char-row">
+                        <span class="char-count" id="ttsCharCount">0 / 5,000</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card" style="margin-bottom:16px">
+                    <div class="fg">
+                        <label class="fl">Voice</label>
+                        <select id="ttsVoice" class="fi">
+                            <option value="">Loading voices…</option>
+                        </select>
+                    </div>
+                    <div class="fg">
+                        <label class="fl">Model</label>
+                        <select id="ttsModel" class="fi">
+                            <option value="eleven_multilingual_v2">Multilingual v2 (Best quality)</option>
+                            <option value="eleven_turbo_v2_5">Turbo v2.5 (Fast)</option>
+                            <option value="eleven_flash_v2_5">Flash v2.5 (Fastest)</option>
+                            <option value="eleven_monolingual_v1">Monolingual v1 (English only)</option>
+                        </select>
+                    </div>
+                    <div class="fg">
+                        <label class="fl" style="margin-bottom:14px">Voice Settings</label>
+                        <div class="slider-row">
+                            <span class="slider-label">Stability</span>
+                            <input type="range" class="slider" id="ttsStability" min="0" max="100" value="50">
+                            <span class="slider-val" id="ttsStabilityVal">50%</span>
+                        </div>
+                        <div class="slider-row">
+                            <span class="slider-label">Clarity + Similarity</span>
+                            <input type="range" class="slider" id="ttsSimilarity" min="0" max="100" value="75">
+                            <span class="slider-val" id="ttsSimilarityVal">75%</span>
+                        </div>
+                        <div class="slider-row">
+                            <span class="slider-label">Style</span>
+                            <input type="range" class="slider" id="ttsStyle" min="0" max="100" value="0">
+                            <span class="slider-val" id="ttsStyleVal">0%</span>
+                        </div>
+                        <div class="toggle-row">
+                            <span class="slider-label" style="width:auto;flex:1">Speaker Boost</span>
+                            <label class="toggle">
+                                <input type="checkbox" id="ttsSpeakerBoost" checked>
+                                <span class="toggle-track"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <button id="ttsGenerateBtn" class="btn btn-gold">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        Generate Audio
+                    </button>
+                </div>
+                <!-- Usage mini card -->
+                <div class="card" id="usageMiniCard" style="display:none">
+                    <div class="section-title" style="font-size:13px;margin-bottom:12px">Usage</div>
+                    <div style="margin-bottom:6px;display:flex;justify-content:space-between;font-size:13px">
+                        <span style="color:var(--t2)">Characters</span>
+                        <span id="usageMiniChars" style="color:var(--gold);font-weight:600">—</span>
+                    </div>
+                    <div class="usage-bar-track"><div class="usage-bar-fill" id="usageMiniBar" style="width:0%"></div></div>
+                    <div style="font-size:11px;color:var(--t3);margin-top:6px" id="usageMiniTier">—</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== VOICE LIBRARY ========== -->
+    <div id="tab-voices" class="tab-panel">
+        <div class="lib-controls">
+            <input type="text" class="fi lib-search" id="voiceSearch" placeholder="Search voices…">
+            <div class="filter-chips" id="filterChips">
+                <button class="chip active" data-filter="all">All</button>
+                <button class="chip" data-filter="premade">Premade</button>
+                <button class="chip" data-filter="cloned">Cloned</button>
+                <button class="chip" data-filter="favorites">★ Favorites</button>
+            </div>
+        </div>
+        <div id="voicesLoading" class="loading-center">
+            <div class="spinner spinner-lg"></div>
+            <p>Loading voices…</p>
+        </div>
+        <div id="voicesGrid" class="voices-grid" style="display:none"></div>
+        <div id="voicesEmpty" class="empty-state" style="display:none">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+            <p>No voices match your search</p>
+        </div>
+    </div>
+
+    <!-- ========== VOICE CLONING ========== -->
+    <div id="tab-clone" class="tab-panel">
+        <div id="cloneError" class="error-banner">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="cloneErrorText"></span>
+        </div>
+        <div style="max-width:700px">
+            <div class="card gold-top" style="margin-bottom:16px">
+                <h3 class="section-title">Clone a Voice</h3>
+                <div class="form-cols">
+                    <div class="fg">
+                        <label class="fl">Voice Name <span style="color:var(--error)">*</span></label>
+                        <input type="text" id="cloneName" class="fi" placeholder="e.g., My Custom Voice">
+                    </div>
+                    <div class="fg">
+                        <label class="fl">Description</label>
+                        <input type="text" id="cloneDesc" class="fi" placeholder="e.g., Warm, professional narrator">
+                    </div>
+                </div>
+                <div class="fg">
+                    <label class="fl">Labels <span style="color:var(--t3);text-transform:none;font-weight:400">(press Enter to add)</span></label>
+                    <div class="tags-input" id="labelsTagsInput">
+                        <input type="text" id="labelsInput" placeholder="accent, gender, age…">
+                    </div>
+                    <div id="labelsList" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"></div>
+                </div>
+                <div class="fg">
+                    <label class="fl">Audio Samples <span style="color:var(--error)">*</span></label>
+                    <div class="dropzone" id="cloneDropzone">
+                        <input type="file" id="cloneFiles" accept="audio/*,video/*" multiple>
+                        <div class="dropzone-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <p>Drop audio files here or click to browse</p>
+                        <span>MP3, WAV, M4A, OGG, FLAC — min 1 min total audio recommended</span>
+                    </div>
+                    <div class="file-list" id="cloneFileList"></div>
+                </div>
+                <button id="cloneBtn" class="btn btn-gold" disabled>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                    Create Voice Clone
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SOUND EFFECTS ========== -->
+    <div id="tab-sfx" class="tab-panel">
+        <div id="sfxError" class="error-banner">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="sfxErrorText"></span>
+        </div>
+        <div style="max-width:700px">
+            <div class="card gold-top">
+                <h3 class="section-title">Generate Sound Effect</h3>
+                <div class="fg">
+                    <label class="fl">Sound Description</label>
+                    <textarea id="sfxText" class="fi" rows="3" placeholder="e.g., A thunderstorm with heavy rain, distant thunder rolls, and wind howling"></textarea>
+                </div>
+                <div class="fg">
+                    <label class="fl">Duration (seconds) — leave blank to auto-detect</label>
+                    <div class="slider-row">
+                        <input type="range" class="slider" id="sfxDuration" min="0" max="22" step="0.5" value="0">
+                        <span class="slider-val" id="sfxDurationVal" style="width:60px">Auto</span>
+                    </div>
+                </div>
+                <div class="fg">
+                    <label class="fl">Prompt Influence</label>
+                    <div class="slider-row">
+                        <input type="range" class="slider" id="sfxInfluence" min="0" max="100" value="30">
+                        <span class="slider-val" id="sfxInfluenceVal">30%</span>
+                    </div>
+                    <p style="font-size:12px;color:var(--t3);margin:6px 0 0">Higher values follow the prompt more closely; lower values add creative variation.</p>
+                </div>
+                <button id="sfxGenerateBtn" class="btn btn-gold">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                    Generate Sound Effect
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SPEECH TO SPEECH ========== -->
+    <div id="tab-s2s" class="tab-panel">
+        <div id="s2sError" class="error-banner">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="s2sErrorText"></span>
+        </div>
+        <div style="max-width:700px">
+            <div class="card gold-top">
+                <h3 class="section-title">Speech to Speech</h3>
+                <div class="fg">
+                    <label class="fl">Source Audio</label>
+                    <div style="display:flex;gap:10px;margin-bottom:12px">
+                        <button id="s2sUploadToggle" class="btn btn-ghost btn-sm" style="flex:1">Upload File</button>
+                        <button id="s2sRecordToggle" class="btn btn-ghost btn-sm" style="flex:1">Record Mic</button>
+                    </div>
+                    <!-- Upload mode -->
+                    <div id="s2sUploadArea">
+                        <div class="dropzone" id="s2sDropzone" style="padding:24px">
+                            <input type="file" id="s2sFile" accept="audio/*,video/*">
+                            <p style="margin:0;font-size:14px">Drop audio file here or click to browse</p>
+                        </div>
+                        <div id="s2sFileDisplay" style="display:none;margin-top:10px" class="file-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/></svg>
+                            <span id="s2sFileName">—</span>
+                            <button class="file-remove" id="s2sFileRemove">×</button>
+                        </div>
+                    </div>
+                    <!-- Record mode -->
+                    <div id="s2sRecordArea" style="display:none">
+                        <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--bg-2);border-radius:8px">
+                            <button id="s2sRecordBtn" class="btn btn-ghost btn-sm">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/></svg>
+                                Start Recording
+                            </button>
+                            <span id="s2sRecordStatus" style="font-size:13px;color:var(--t3)">Click to record</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fg">
+                    <label class="fl">Target Voice</label>
+                    <select id="s2sVoice" class="fi">
+                        <option value="">Loading voices…</option>
+                    </select>
+                </div>
+                <div class="fg">
+                    <label class="fl">Model</label>
+                    <select id="s2sModel" class="fi">
+                        <option value="eleven_multilingual_sts_v2">Multilingual STS v2</option>
+                        <option value="eleven_english_sts_v2">English STS v2</option>
+                    </select>
+                </div>
+                <div class="fg">
+                    <label class="fl" style="margin-bottom:14px">Voice Settings</label>
+                    <div class="slider-row">
+                        <span class="slider-label">Stability</span>
+                        <input type="range" class="slider" id="s2sStability" min="0" max="100" value="50">
+                        <span class="slider-val" id="s2sStabilityVal">50%</span>
+                    </div>
+                    <div class="slider-row">
+                        <span class="slider-label">Clarity + Similarity</span>
+                        <input type="range" class="slider" id="s2sSimilarity" min="0" max="100" value="75">
+                        <span class="slider-val" id="s2sSimilarityVal">75%</span>
+                    </div>
+                </div>
+                <button id="s2sConvertBtn" class="btn btn-gold" disabled>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                    Convert Voice
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== AUDIO ISOLATION ========== -->
+    <div id="tab-isolation" class="tab-panel">
+        <div id="isoError" class="error-banner">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="isoErrorText"></span>
+        </div>
+        <div style="max-width:700px">
+            <div class="card gold-top">
+                <h3 class="section-title">Audio Isolation</h3>
+                <p style="color:var(--t2);font-size:14px;margin:0 0 20px">Remove background noise and isolate voice from audio recordings.</p>
+                <div class="fg">
+                    <label class="fl">Source Audio</label>
+                    <div class="dropzone" id="isoDropzone" style="padding:28px">
+                        <input type="file" id="isoFile" accept="audio/*,video/*">
+                        <div class="dropzone-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <p>Drop audio file or click to browse</p>
+                        <span>MP3, WAV, M4A, FLAC, OGG supported</span>
+                    </div>
+                    <div id="isoFileDisplay" style="display:none;margin-top:10px" class="file-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/></svg>
+                        <span id="isoFileName">—</span>
+                        <button class="file-remove" id="isoFileRemove">×</button>
+                    </div>
+                </div>
+                <button id="isoBtn" class="btn btn-gold" disabled>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                    Isolate Voice
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HISTORY ========== -->
+    <div id="tab-history" class="tab-panel">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:12px;flex-wrap:wrap">
+            <div style="display:flex;gap:10px">
+                <button id="fetchApiHistoryBtn" class="btn btn-ghost btn-sm">Sync from ElevenLabs</button>
+                <button id="clearLocalHistoryBtn" class="btn btn-ghost btn-sm" style="color:var(--error);border-color:rgba(248,113,113,.3)">Clear Local</button>
+            </div>
+            <span style="font-size:12px;color:var(--t3)">Local history stored in browser</span>
+        </div>
+        <div id="historyList" class="history-list"></div>
+        <div id="historyEmpty" class="empty-state" style="display:none">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <p>No history yet — generate some audio first</p>
+        </div>
+    </div>
+</div>
+
+<!-- Audio Player Bar -->
+<div id="audioPlayerBar" class="audio-player-bar">
+    <div class="player-label-wrap">
+        <span class="player-label" id="playerLabel">Audio</span>
+        <span class="player-sublabel" id="playerSublabel"></span>
+    </div>
+    <button class="player-play-btn" id="playerPlayBtn">
+        <svg id="playerPlayIcon" width="18" height="18" viewBox="0 0 24 24" fill="#0a0a0a" stroke="#0a0a0a" stroke-width="1"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+    </button>
+    <div class="player-progress-wrap">
+        <span class="player-time" id="playerTime">0:00</span>
+        <div class="player-progress" id="playerProgress">
+            <div class="player-progress-fill" id="playerProgressFill"></div>
+        </div>
+        <span class="player-time" id="playerDuration">0:00</span>
+    </div>
+    <canvas class="waveform-canvas" id="waveformCanvas"></canvas>
+    <div class="player-actions">
+        <button class="player-action-btn" id="playerDownloadBtn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+        </button>
+    </div>
+    <button class="player-close-btn" id="playerCloseBtn">×</button>
+    <audio id="playerAudio" preload="none"></audio>
+</div>
+
+    </main>
+
+    <div id="toastsContainer" class="toasts-container"></div>
+
+    <footer></footer>
+
+<script>
+// ============================================================
+//  STATE
+// ============================================================
+let voices = [];
+let favorites = new Set(JSON.parse(localStorage.getItem('el_favorites') || '[]'));
+let localHistory = JSON.parse(localStorage.getItem('el_history') || '[]');
+let currentAudioBlob = null;
+let currentAudioLabel = '';
+let currentDownloadName = 'audio.mp3';
+
+// Audio viz
+let audioCtx = null;
+let analyserNode = null;
+let waveAnimId = null;
+
+// S2S recording
+let mediaRecorder = null;
+let recordedChunks = [];
+let s2sRecordedBlob = null;
+
+// File state for forms
+let s2sFileData = null;
+let isoFileData = null;
+let cloneFilesData = [];
+let labelTags = {};
+
+// ============================================================
+//  API HELPER
+// ============================================================
+async function elApi(body) {
+    const res = await fetch('/api/elevenlabs', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || data.detail?.message || `Error ${res.status}`);
+    return data;
+}
+
+async function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+    });
+}
+
+// ============================================================
+//  INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+    initTabs();
+    initSliders();
+    loadVoices();
+    renderHistory();
+    loadSubscription();
+    initCloneDropzone();
+    initS2SControls();
+    initIsolationControls();
+    initPlayer();
+    initLabelsInput();
+    initTtsCharCount();
+});
+
+// ============================================================
+//  TABS
+// ============================================================
+function initTabs() {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+            if (btn.dataset.tab === 'voices' && voices.length > 0) renderVoiceLibrary();
+            if (btn.dataset.tab === 'history') renderHistory();
+        });
+    });
+}
+
+// ============================================================
+//  SLIDERS
+// ============================================================
+function initSliders() {
+    const sliders = [
+        ['ttsStability', 'ttsStabilityVal'],
+        ['ttsSimilarity', 'ttsSimilarityVal'],
+        ['ttsStyle', 'ttsStyleVal'],
+        ['s2sStability', 's2sStabilityVal'],
+        ['s2sSimilarity', 's2sSimilarityVal'],
+    ];
+    sliders.forEach(([id, valId]) => {
+        const el = document.getElementById(id);
+        const valEl = document.getElementById(valId);
+        if (!el || !valEl) return;
+        el.addEventListener('input', () => { valEl.textContent = el.value + '%'; });
+    });
+
+    const sfxDur = document.getElementById('sfxDuration');
+    const sfxDurVal = document.getElementById('sfxDurationVal');
+    sfxDur.addEventListener('input', () => {
+        sfxDurVal.textContent = sfxDur.value == 0 ? 'Auto' : sfxDur.value + 's';
+    });
+
+    const sfxInf = document.getElementById('sfxInfluence');
+    const sfxInfVal = document.getElementById('sfxInfluenceVal');
+    sfxInf.addEventListener('input', () => { sfxInfVal.textContent = sfxInf.value + '%'; });
+}
+
+// ============================================================
+//  TTS CHAR COUNT
+// ============================================================
+function initTtsCharCount() {
+    const ta = document.getElementById('ttsText');
+    const cc = document.getElementById('ttsCharCount');
+    ta.addEventListener('input', () => {
+        const len = ta.value.length;
+        cc.textContent = len.toLocaleString() + ' / 5,000';
+        cc.className = 'char-count' + (len > 4500 ? (len >= 5000 ? ' over' : ' warn') : '');
+    });
+    // TTS generate
+    document.getElementById('ttsGenerateBtn').addEventListener('click', handleTtsGenerate);
+}
+
+// ============================================================
+//  VOICES
+// ============================================================
+async function loadVoices() {
+    try {
+        const data = await elApi({ op: 'voices' });
+        voices = (data.voices || []).sort((a, b) => a.name.localeCompare(b.name));
+        populateVoiceSelects();
+        document.getElementById('voicesLoading').style.display = 'none';
+        document.getElementById('voicesGrid').style.display = 'grid';
+        renderVoiceLibrary();
+    } catch (e) {
+        document.getElementById('voicesLoading').innerHTML =
+            `<p style="color:var(--error)">Failed to load voices: ${e.message}</p>`;
+    }
+}
+
+function populateVoiceSelects() {
+    const selects = ['ttsVoice', 's2sVoice'];
+    selects.forEach(id => {
+        const sel = document.getElementById(id);
+        sel.innerHTML = '<option value="">Select a voice…</option>';
+        // Group: premade first, then cloned
+        const premade = voices.filter(v => v.category !== 'cloned');
+        const cloned = voices.filter(v => v.category === 'cloned');
+        if (premade.length) {
+            const g = document.createElement('optgroup'); g.label = 'Premade';
+            premade.forEach(v => { const o = document.createElement('option'); o.value = v.voice_id; o.textContent = v.name; g.appendChild(o); });
+            sel.appendChild(g);
+        }
+        if (cloned.length) {
+            const g = document.createElement('optgroup'); g.label = 'Cloned';
+            cloned.forEach(v => { const o = document.createElement('option'); o.value = v.voice_id; o.textContent = v.name; g.appendChild(o); });
+            sel.appendChild(g);
+        }
+    });
+}
+
+// ============================================================
+//  VOICE LIBRARY
+// ============================================================
+let voiceFilter = 'all';
+let voiceSearch = '';
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('voiceSearch').addEventListener('input', e => {
+        voiceSearch = e.target.value.toLowerCase();
+        renderVoiceLibrary();
+    });
+    document.querySelectorAll('#filterChips .chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+            document.querySelectorAll('#filterChips .chip').forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            voiceFilter = chip.dataset.filter;
+            renderVoiceLibrary();
+        });
+    });
+});
+
+function renderVoiceLibrary() {
+    const grid = document.getElementById('voicesGrid');
+    const empty = document.getElementById('voicesEmpty');
+    let filtered = voices.filter(v => {
+        if (voiceSearch && !v.name.toLowerCase().includes(voiceSearch) &&
+            !(v.labels && Object.values(v.labels).some(l => l.toLowerCase().includes(voiceSearch)))) return false;
+        if (voiceFilter === 'premade' && v.category === 'cloned') return false;
+        if (voiceFilter === 'cloned' && v.category !== 'cloned') return false;
+        if (voiceFilter === 'favorites' && !favorites.has(v.voice_id)) return false;
+        return true;
+    });
+    if (!filtered.length) {
+        grid.style.display = 'none'; empty.style.display = 'block'; return;
+    }
+    grid.style.display = 'grid'; empty.style.display = 'none';
+    grid.innerHTML = filtered.map(v => {
+        const labels = v.labels ? Object.entries(v.labels).filter(([,val]) => val).map(([,val]) =>
+            `<span class="badge badge-gray">${escHtml(val)}</span>`).join('') : '';
+        const isFav = favorites.has(v.voice_id);
+        return `<div class="voice-card">
+            <div class="voice-card-top">
+                <span class="voice-name">${escHtml(v.name)}</span>
+                <button class="star-btn ${isFav ? 'starred' : ''}" data-vid="${v.voice_id}" title="${isFav ? 'Unfavorite' : 'Favorite'}">
+                    ${isFav ? '★' : '☆'}
+                </button>
+            </div>
+            <div class="voice-meta">
+                <span class="badge ${v.category === 'cloned' ? 'badge-green' : ''}">${escHtml(v.category || 'premade')}</span>
+                ${labels}
+            </div>
+            <div class="voice-actions">
+                <button class="btn btn-ghost btn-sm preview-btn" data-vid="${v.voice_id}" data-preview="${v.preview_url || ''}">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Preview
+                </button>
+                <button class="btn btn-ghost btn-sm use-voice-btn" data-vid="${v.voice_id}" data-name="${escHtml(v.name)}">Use Voice</button>
+            </div>
+        </div>`;
+    }).join('');
+
+    grid.querySelectorAll('.star-btn').forEach(btn => {
+        btn.addEventListener('click', () => toggleFavorite(btn.dataset.vid));
+    });
+    grid.querySelectorAll('.preview-btn').forEach(btn => {
+        btn.addEventListener('click', () => previewVoice(btn.dataset.vid, btn.dataset.preview));
+    });
+    grid.querySelectorAll('.use-voice-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.getElementById('ttsVoice').value = btn.dataset.vid;
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            document.querySelector('[data-tab="tts"]').classList.add('active');
+            document.getElementById('tab-tts').classList.add('active');
+            showToast(`Voice set: ${btn.dataset.name}`, 'success');
+        });
+    });
+}
+
+function toggleFavorite(voiceId) {
+    if (favorites.has(voiceId)) { favorites.delete(voiceId); } else { favorites.add(voiceId); }
+    localStorage.setItem('el_favorites', JSON.stringify([...favorites]));
+    renderVoiceLibrary();
+}
+
+async function previewVoice(voiceId, previewUrl) {
+    if (!previewUrl) { showToast('No preview available for this voice', 'error'); return; }
+    showToast('Loading preview…');
+    try {
+        const data = await elApi({ op: 'voice_preview', previewUrl });
+        const voice = voices.find(v => v.voice_id === voiceId);
+        playBase64Audio(data.audio, data.contentType, voice?.name || 'Voice Preview', 'preview');
+    } catch (e) {
+        showToast('Preview failed: ' + e.message, 'error');
+    }
+}
+
+// ============================================================
+//  TTS GENERATE
+// ============================================================
+async function handleTtsGenerate() {
+    const text = document.getElementById('ttsText').value.trim();
+    const voiceId = document.getElementById('ttsVoice').value;
+    if (!text) { showError('ttsError', 'ttsErrorText', 'Please enter some text.'); return; }
+    if (!voiceId) { showError('ttsError', 'ttsErrorText', 'Please select a voice.'); return; }
+    hideError('ttsError');
+
+    const btn = document.getElementById('ttsGenerateBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<div class="spinner"></div> Generating…';
+
+    try {
+        const data = await elApi({
+            op: 'tts',
+            voiceId,
+            text,
+            modelId: document.getElementById('ttsModel').value,
+            stability: +document.getElementById('ttsStability').value,
+            similarityBoost: +document.getElementById('ttsSimilarity').value,
+            style: +document.getElementById('ttsStyle').value,
+            useSpeakerBoost: document.getElementById('ttsSpeakerBoost').checked
+        });
+        const voice = voices.find(v => v.voice_id === voiceId);
+        const label = voice?.name || 'TTS Output';
+        playBase64Audio(data.audio, data.contentType, label, 'tts');
+        addToHistory({ type: 'tts', label, text: text.slice(0, 100) + (text.length > 100 ? '…' : ''), audio: data.audio, contentType: data.contentType });
+        showToast('Audio generated!', 'success');
+    } catch (e) {
+        showError('ttsError', 'ttsErrorText', e.message);
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> Generate Audio';
+    }
+}
+
+// ============================================================
+//  SFX
+// ============================================================
+document.getElementById('sfxGenerateBtn').addEventListener('click', async () => {
+    const text = document.getElementById('sfxText').value.trim();
+    if (!text) { showError('sfxError', 'sfxErrorText', 'Please describe the sound effect.'); return; }
+    hideError('sfxError');
+
+    const btn = document.getElementById('sfxGenerateBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<div class="spinner"></div> Generating…';
+
+    try {
+        const durVal = +document.getElementById('sfxDuration').value;
+        const body = {
+            op: 'sfx', text,
+            promptInfluence: +document.getElementById('sfxInfluence').value / 100
+        };
+        if (durVal > 0) body.durationSeconds = durVal;
+        const data = await elApi(body);
+        playBase64Audio(data.audio, data.contentType, 'Sound Effect: ' + text.slice(0, 40), 'sfx');
+        addToHistory({ type: 'sfx', label: 'SFX', text: text.slice(0, 100), audio: data.audio, contentType: data.contentType });
+        showToast('Sound effect generated!', 'success');
+    } catch (e) {
+        showError('sfxError', 'sfxErrorText', e.message);
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> Generate Sound Effect';
+    }
+});
+
+// ============================================================
+//  SPEECH TO SPEECH
+// ============================================================
+function initS2SControls() {
+    const uploadToggle = document.getElementById('s2sUploadToggle');
+    const recordToggle = document.getElementById('s2sRecordToggle');
+    const uploadArea = document.getElementById('s2sUploadArea');
+    const recordArea = document.getElementById('s2sRecordArea');
+
+    uploadToggle.addEventListener('click', () => {
+        uploadArea.style.display = 'block'; recordArea.style.display = 'none';
+        uploadToggle.style.background = 'var(--gold-dim)'; recordToggle.style.background = '';
+    });
+    recordToggle.addEventListener('click', () => {
+        uploadArea.style.display = 'none'; recordArea.style.display = 'block';
+        recordToggle.style.background = 'var(--gold-dim)'; uploadToggle.style.background = '';
+    });
+    uploadToggle.style.background = 'var(--gold-dim)';
+
+    const fileInput = document.getElementById('s2sFile');
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files[0]) {
+            s2sFileData = fileInput.files[0];
+            document.getElementById('s2sFileDisplay').style.display = 'flex';
+            document.getElementById('s2sFileName').textContent = fileInput.files[0].name;
+            document.getElementById('s2sDropzone').style.display = 'none';
+            updateS2sBtn();
+        }
+    });
+    document.getElementById('s2sFileRemove').addEventListener('click', () => {
+        s2sFileData = null; fileInput.value = '';
+        document.getElementById('s2sFileDisplay').style.display = 'none';
+        document.getElementById('s2sDropzone').style.display = 'block';
+        updateS2sBtn();
+    });
+
+    // Recording
+    document.getElementById('s2sRecordBtn').addEventListener('click', toggleRecording);
+
+    document.getElementById('s2sConvertBtn').addEventListener('click', handleS2S);
+}
+
+function updateS2sBtn() {
+    const hasAudio = s2sFileData || s2sRecordedBlob;
+    const hasVoice = document.getElementById('s2sVoice').value;
+    document.getElementById('s2sConvertBtn').disabled = !(hasAudio && hasVoice);
+}
+
+document.getElementById('s2sVoice').addEventListener('change', updateS2sBtn);
+
+async function toggleRecording() {
+    const btn = document.getElementById('s2sRecordBtn');
+    const status = document.getElementById('s2sRecordStatus');
+    if (mediaRecorder && mediaRecorder.state === 'recording') {
+        mediaRecorder.stop();
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/></svg> Start Recording';
+        status.innerHTML = 'Processing…';
+        return;
+    }
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        recordedChunks = [];
+        mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder.ondataavailable = e => { if (e.data.size > 0) recordedChunks.push(e.data); };
+        mediaRecorder.onstop = () => {
+            stream.getTracks().forEach(t => t.stop());
+            s2sRecordedBlob = new Blob(recordedChunks, { type: 'audio/webm' });
+            s2sFileData = null;
+            status.innerHTML = '<span class="rec-indicator"><span class="rec-dot"></span></span> Recorded (' + formatDur(s2sRecordedBlob.size / 16000) + ')';
+            status.innerHTML = '✓ Recorded — ready to convert';
+            status.style.color = 'var(--success)';
+            updateS2sBtn();
+        };
+        mediaRecorder.start();
+        btn.innerHTML = '<span style="color:var(--error)">■</span> Stop Recording';
+        status.innerHTML = '<span class="rec-indicator"><span class="rec-dot"></span>Recording…</span>';
+        status.style.color = '';
+    } catch (e) {
+        status.textContent = 'Mic access denied: ' + e.message;
+        status.style.color = 'var(--error)';
+    }
+}
+
+async function handleS2S() {
+    const voiceId = document.getElementById('s2sVoice').value;
+    if (!voiceId) return;
+
+    const audioSource = s2sFileData || s2sRecordedBlob;
+    if (!audioSource) { showError('s2sError', 's2sErrorText', 'Please upload or record audio first.'); return; }
+    hideError('s2sError');
+
+    const btn = document.getElementById('s2sConvertBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<div class="spinner"></div> Converting…';
+
+    try {
+        const base64 = await fileToBase64(audioSource instanceof File ? audioSource : new File([audioSource], 'recording.webm'));
+        const voice = voices.find(v => v.voice_id === voiceId);
+        const data = await elApi({
+            op: 's2s', voiceId,
+            audioFile: { base64, mimeType: audioSource.type || 'audio/webm', name: audioSource instanceof File ? audioSource.name : 'recording.webm' },
+            modelId: document.getElementById('s2sModel').value,
+            stability: +document.getElementById('s2sStability').value,
+            similarityBoost: +document.getElementById('s2sSimilarity').value
+        });
+        const label = 'S2S → ' + (voice?.name || voiceId);
+        playBase64Audio(data.audio, data.contentType, label, 's2s');
+        addToHistory({ type: 's2s', label, text: label, audio: data.audio, contentType: data.contentType });
+        showToast('Voice converted!', 'success');
+    } catch (e) {
+        showError('s2sError', 's2sErrorText', e.message);
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> Convert Voice';
+        updateS2sBtn();
+    }
+}
+
+// ============================================================
+//  AUDIO ISOLATION
+// ============================================================
+function initIsolationControls() {
+    const fileInput = document.getElementById('isoFile');
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files[0]) {
+            isoFileData = fileInput.files[0];
+            document.getElementById('isoFileDisplay').style.display = 'flex';
+            document.getElementById('isoFileName').textContent = fileInput.files[0].name;
+            document.getElementById('isoDropzone').style.display = 'none';
+            document.getElementById('isoBtn').disabled = false;
+        }
+    });
+    document.getElementById('isoFileRemove').addEventListener('click', () => {
+        isoFileData = null; fileInput.value = '';
+        document.getElementById('isoFileDisplay').style.display = 'none';
+        document.getElementById('isoDropzone').style.display = 'block';
+        document.getElementById('isoBtn').disabled = true;
+    });
+    document.getElementById('isoBtn').addEventListener('click', handleIsolation);
+}
+
+async function handleIsolation() {
+    if (!isoFileData) return;
+    const btn = document.getElementById('isoBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<div class="spinner"></div> Isolating…';
+    hideError('isoError');
+
+    try {
+        const base64 = await fileToBase64(isoFileData);
+        const data = await elApi({
+            op: 'isolation',
+            audioFile: { base64, mimeType: isoFileData.type || 'audio/mpeg', name: isoFileData.name }
+        });
+        playBase64Audio(data.audio, data.contentType, 'Isolated: ' + isoFileData.name, 'isolation');
+        addToHistory({ type: 'isolation', label: 'Isolated Audio', text: isoFileData.name, audio: data.audio, contentType: data.contentType });
+        showToast('Audio isolated!', 'success');
+    } catch (e) {
+        showError('isoError', 'isoErrorText', e.message);
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg> Isolate Voice';
+    }
+}
+
+// ============================================================
+//  VOICE CLONING
+// ============================================================
+function initCloneDropzone() {
+    const dz = document.getElementById('cloneDropzone');
+    const fileInput = document.getElementById('cloneFiles');
+
+    ['dragover', 'dragenter'].forEach(e => dz.addEventListener(e, ev => { ev.preventDefault(); dz.classList.add('over'); }));
+    ['dragleave', 'drop'].forEach(e => dz.addEventListener(e, ev => { ev.preventDefault(); dz.classList.remove('over'); }));
+    dz.addEventListener('drop', e => addCloneFiles(e.dataTransfer.files));
+    fileInput.addEventListener('change', () => addCloneFiles(fileInput.files));
+
+    document.getElementById('cloneName').addEventListener('input', updateCloneBtn);
+    document.getElementById('cloneBtn').addEventListener('click', handleClone);
+}
+
+function addCloneFiles(files) {
+    [...files].forEach(f => {
+        if (!cloneFilesData.find(x => x.name === f.name)) cloneFilesData.push(f);
+    });
+    renderCloneFileList();
+    updateCloneBtn();
+}
+
+function renderCloneFileList() {
+    const list = document.getElementById('cloneFileList');
+    if (!cloneFilesData.length) { list.innerHTML = ''; return; }
+    list.innerHTML = cloneFilesData.map((f, i) => `
+        <div class="file-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/></svg>
+            <span>${escHtml(f.name)}</span>
+            <small style="color:var(--t3);flex-shrink:0">${(f.size / 1024).toFixed(0)} KB</small>
+            <button class="file-remove" data-idx="${i}">×</button>
+        </div>
+    `).join('');
+    list.querySelectorAll('.file-remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+            cloneFilesData.splice(+btn.dataset.idx, 1);
+            renderCloneFileList(); updateCloneBtn();
+        });
+    });
+}
+
+function updateCloneBtn() {
+    const name = document.getElementById('cloneName').value.trim();
+    document.getElementById('cloneBtn').disabled = !(name && cloneFilesData.length > 0);
+}
+
+async function handleClone() {
+    const name = document.getElementById('cloneName').value.trim();
+    if (!name || !cloneFilesData.length) return;
+    hideError('cloneError');
+
+    const btn = document.getElementById('cloneBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<div class="spinner"></div> Creating…';
+
+    try {
+        const files = await Promise.all(cloneFilesData.map(async f => ({
+            base64: await fileToBase64(f),
+            mimeType: f.type || 'audio/mpeg',
+            name: f.name
+        })));
+        const data = await elApi({
+            op: 'clone', name,
+            description: document.getElementById('cloneDesc').value.trim() || undefined,
+            files,
+            labels: Object.keys(labelTags).length > 0 ? labelTags : undefined
+        });
+        showToast(`Voice "${name}" created! (ID: ${data.voice_id})`, 'success');
+        // Refresh voice list
+        cloneFilesData = []; labelTags = {};
+        document.getElementById('cloneName').value = '';
+        document.getElementById('cloneDesc').value = '';
+        document.getElementById('cloneFileList').innerHTML = '';
+        document.getElementById('labelsList').innerHTML = '';
+        loadVoices();
+    } catch (e) {
+        showError('cloneError', 'cloneErrorText', e.message);
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg> Create Voice Clone';
+        updateCloneBtn();
+    }
+}
+
+// ============================================================
+//  LABELS INPUT
+// ============================================================
+function initLabelsInput() {
+    const input = document.getElementById('labelsInput');
+    input.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ',') {
+            e.preventDefault();
+            const val = input.value.trim().replace(/,+$/, '');
+            if (val) { addLabelTag(val); input.value = ''; }
+        }
+    });
+}
+
+function addLabelTag(val) {
+    if (Object.values(labelTags).includes(val)) return;
+    const key = 'label_' + Date.now();
+    labelTags[key] = val;
+    renderLabelTags();
+}
+
+function renderLabelTags() {
+    const list = document.getElementById('labelsList');
+    list.innerHTML = Object.entries(labelTags).map(([k, v]) =>
+        `<span class="tag">${escHtml(v)}<button data-key="${k}">×</button></span>`
+    ).join('');
+    list.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => { delete labelTags[btn.dataset.key]; renderLabelTags(); });
+    });
+}
+
+// ============================================================
+//  HISTORY
+// ============================================================
+function addToHistory(item) {
+    const entry = { ...item, id: Date.now(), date: new Date().toISOString() };
+    localHistory.unshift(entry);
+    if (localHistory.length > 50) localHistory = localHistory.slice(0, 50);
+    localStorage.setItem('el_history', JSON.stringify(localHistory));
+}
+
+function renderHistory() {
+    const list = document.getElementById('historyList');
+    const empty = document.getElementById('historyEmpty');
+    if (!localHistory.length) {
+        list.innerHTML = ''; empty.style.display = 'block'; return;
+    }
+    empty.style.display = 'none';
+    list.innerHTML = localHistory.map((item, idx) => `
+        <div class="history-item" data-idx="${idx}">
+            <button class="history-play" data-idx="${idx}" title="Play">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </button>
+            <div class="history-info">
+                <div class="history-text">${escHtml(item.text || item.label || '—')}</div>
+                <div class="history-meta">
+                    <span class="badge badge-gray">${escHtml(item.type || 'audio')}</span>
+                    <span>${escHtml(item.label || '')}</span>
+                    <span>${formatDate(item.date)}</span>
+                </div>
+            </div>
+            <div class="history-actions">
+                <button class="btn btn-ghost btn-sm dl-btn" data-idx="${idx}">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </button>
+                <button class="btn btn-danger btn-sm del-btn" data-idx="${idx}">×</button>
+            </div>
+        </div>
+    `).join('');
+
+    list.querySelectorAll('.history-play').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = localHistory[+btn.dataset.idx];
+            if (item?.audio) playBase64Audio(item.audio, item.contentType, item.label || 'History', item.type);
+        });
+    });
+    list.querySelectorAll('.dl-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = localHistory[+btn.dataset.idx];
+            if (item?.audio) downloadBase64Audio(item.audio, item.contentType, (item.label || 'audio').replace(/\s+/g, '_') + '.mp3');
+        });
+    });
+    list.querySelectorAll('.del-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            localHistory.splice(+btn.dataset.idx, 1);
+            localStorage.setItem('el_history', JSON.stringify(localHistory));
+            renderHistory();
+        });
+    });
+}
+
+document.getElementById('fetchApiHistoryBtn').addEventListener('click', async () => {
+    const btn = document.getElementById('fetchApiHistoryBtn');
+    btn.disabled = true; btn.textContent = 'Syncing…';
+    try {
+        const data = await elApi({ op: 'history', pageSize: 50 });
+        const items = data.history || [];
+        let added = 0;
+        items.forEach(h => {
+            if (!localHistory.find(x => x.id === h.history_item_id)) {
+                localHistory.push({
+                    id: h.history_item_id, type: 'tts', label: h.voice_name || 'TTS',
+                    text: h.text?.slice(0, 100) || '—', date: h.date_unix ? new Date(h.date_unix * 1000).toISOString() : new Date().toISOString(),
+                    apiHistoryId: h.history_item_id
+                });
+                added++;
+            }
+        });
+        localStorage.setItem('el_history', JSON.stringify(localHistory));
+        renderHistory();
+        showToast(`Synced ${added} new items from ElevenLabs`, 'success');
+    } catch (e) {
+        showToast('Sync failed: ' + e.message, 'error');
+    } finally {
+        btn.disabled = false; btn.textContent = 'Sync from ElevenLabs';
+    }
+});
+
+document.getElementById('clearLocalHistoryBtn').addEventListener('click', () => {
+    if (!confirm('Clear all local history?')) return;
+    localHistory = [];
+    localStorage.setItem('el_history', '[]');
+    renderHistory();
+    showToast('History cleared');
+});
+
+// ============================================================
+//  SUBSCRIPTION / USAGE
+// ============================================================
+async function loadSubscription() {
+    try {
+        const data = await elApi({ op: 'subscription' });
+        const used = data.character_count || 0;
+        const limit = data.character_limit || 0;
+        const pct = limit > 0 ? Math.min(100, (used / limit) * 100) : 0;
+
+        const card = document.getElementById('usageMiniCard');
+        card.style.display = 'block';
+        document.getElementById('usageMiniChars').textContent = used.toLocaleString() + ' / ' + (limit ? limit.toLocaleString() : '∞');
+        document.getElementById('usageMiniBar').style.width = pct + '%';
+        document.getElementById('usageMiniTier').textContent = (data.tier || 'free').charAt(0).toUpperCase() + (data.tier || 'free').slice(1) + ' plan · ' + pct.toFixed(0) + '% used';
+    } catch {}
+}
+
+// ============================================================
+//  AUDIO PLAYER
+// ============================================================
+function initPlayer() {
+    const audio = document.getElementById('playerAudio');
+    const playBtn = document.getElementById('playerPlayBtn');
+    const playIcon = document.getElementById('playerPlayIcon');
+    const progress = document.getElementById('playerProgress');
+    const fill = document.getElementById('playerProgressFill');
+    const timeEl = document.getElementById('playerTime');
+    const durEl = document.getElementById('playerDuration');
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) { audio.play(); } else { audio.pause(); }
+    });
+    audio.addEventListener('play', () => {
+        playIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>';
+        playIcon.setAttribute('fill', '#0a0a0a');
+        startWaveform();
+    });
+    audio.addEventListener('pause', () => {
+        playIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"></polygon>';
+        stopWaveform();
+    });
+    audio.addEventListener('ended', () => {
+        playIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"></polygon>';
+        fill.style.width = '0%';
+        stopWaveform();
+    });
+    audio.addEventListener('timeupdate', () => {
+        if (!audio.duration) return;
+        const pct = (audio.currentTime / audio.duration) * 100;
+        fill.style.width = pct + '%';
+        timeEl.textContent = formatDur(audio.currentTime);
+    });
+    audio.addEventListener('loadedmetadata', () => {
+        durEl.textContent = formatDur(audio.duration);
+    });
+    progress.addEventListener('click', e => {
+        const rect = progress.getBoundingClientRect();
+        const pct = (e.clientX - rect.left) / rect.width;
+        audio.currentTime = pct * audio.duration;
+    });
+    document.getElementById('playerCloseBtn').addEventListener('click', () => {
+        audio.pause();
+        document.getElementById('audioPlayerBar').classList.remove('visible');
+        stopWaveform();
+    });
+    document.getElementById('playerDownloadBtn').addEventListener('click', () => {
+        if (currentAudioBlob) {
+            const url = URL.createObjectURL(currentAudioBlob);
+            const a = document.createElement('a'); a.href = url; a.download = currentDownloadName; a.click();
+            setTimeout(() => URL.revokeObjectURL(url), 5000);
+        }
+    });
+}
+
+function playBase64Audio(base64, contentType, label, type) {
+    const bytes = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
+    const blob = new Blob([bytes], { type: contentType || 'audio/mpeg' });
+    currentAudioBlob = blob;
+    currentAudioLabel = label;
+    currentDownloadName = (label || type || 'audio').replace(/[^a-z0-9_\-\s]/gi, '_').slice(0, 40) + '.mp3';
+
+    const url = URL.createObjectURL(blob);
+    const audio = document.getElementById('playerAudio');
+    audio.src = url;
+
+    document.getElementById('playerLabel').textContent = label || 'Audio';
+    document.getElementById('playerSublabel').textContent = type ? type.toUpperCase() : '';
+    document.getElementById('audioPlayerBar').classList.add('visible');
+
+    // Reset viz
+    stopWaveform();
+    setupWaveform(audio);
+
+    audio.play().catch(() => {});
+}
+
+function downloadBase64Audio(base64, contentType, filename) {
+    const bytes = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
+    const blob = new Blob([bytes], { type: contentType || 'audio/mpeg' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = filename; a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+}
+
+// ============================================================
+//  WAVEFORM VISUALIZER
+// ============================================================
+function setupWaveform(audioEl) {
+    try {
+        if (audioCtx) { audioCtx.close(); audioCtx = null; }
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        analyserNode = audioCtx.createAnalyser();
+        analyserNode.fftSize = 64;
+        const source = audioCtx.createMediaElementSource(audioEl);
+        source.connect(analyserNode);
+        analyserNode.connect(audioCtx.destination);
+    } catch {}
+}
+
+function startWaveform() {
+    const canvas = document.getElementById('waveformCanvas');
+    if (!canvas || !analyserNode) return;
+    const ctx = canvas.getContext('2d');
+    const W = canvas.offsetWidth || 180;
+    const H = canvas.offsetHeight || 40;
+    canvas.width = W * window.devicePixelRatio;
+    canvas.height = H * window.devicePixelRatio;
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+    const bufLen = analyserNode.frequencyBinCount;
+    const data = new Uint8Array(bufLen);
+
+    function draw() {
+        waveAnimId = requestAnimationFrame(draw);
+        analyserNode.getByteFrequencyData(data);
+        ctx.clearRect(0, 0, W, H);
+        const bw = W / bufLen * 2.2;
+        for (let i = 0; i < bufLen; i++) {
+            const v = data[i] / 255;
+            const h = Math.max(2, v * H * 0.9);
+            const alpha = 0.35 + v * 0.65;
+            ctx.fillStyle = `rgba(255,215,0,${alpha})`;
+            ctx.fillRect(i * (bw + 1), H - h, Math.max(1, bw), h);
+        }
+    }
+    draw();
+}
+
+function stopWaveform() {
+    if (waveAnimId) { cancelAnimationFrame(waveAnimId); waveAnimId = null; }
+    const canvas = document.getElementById('waveformCanvas');
+    if (canvas) { const ctx = canvas.getContext('2d'); ctx.clearRect(0, 0, canvas.width, canvas.height); }
+}
+
+// ============================================================
+//  HELPERS
+// ============================================================
+function showError(bannerId, textId, msg) {
+    document.getElementById(bannerId).classList.add('show');
+    document.getElementById(textId).textContent = msg;
+}
+function hideError(bannerId) {
+    document.getElementById(bannerId).classList.remove('show');
+}
+
+function showToast(msg, type = 'info') {
+    const c = document.getElementById('toastsContainer');
+    const t = document.createElement('div');
+    t.className = 'toast' + (type !== 'info' ? ' ' + type : '');
+    t.innerHTML = `<span class="toast-dot"></span>${escHtml(msg)}`;
+    c.appendChild(t);
+    setTimeout(() => { t.style.opacity = '0'; t.style.transition = 'opacity .3s'; setTimeout(() => t.remove(), 300); }, 3000);
+}
+
+function formatDur(secs) {
+    if (!secs || isNaN(secs)) return '0:00';
+    const m = Math.floor(secs / 60);
+    const s = Math.floor(secs % 60);
+    return m + ':' + String(s).padStart(2, '0');
+}
+
+function formatDate(iso) {
+    if (!iso) return '';
+    try { return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); } catch { return iso; }
+}
+
+function escHtml(str) {
+    if (!str) return '';
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+
+    <footer></footer>
+    <script src="/JS/sidebar.js"></script>
+</body>
+</html>
