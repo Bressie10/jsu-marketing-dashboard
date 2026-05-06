@@ -333,6 +333,8 @@ textarea.fi { resize: vertical; line-height: 1.6; }
     .audio-player-bar { padding: 0 16px; }
     .player-label-wrap { display: none; }
 }
+.gdrive-btn{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:5px 12px;font-size:11px;font-family:inherit;background:transparent;border:1px solid rgba(255,215,0,.3);border-radius:5px;color:#FFD700;cursor:pointer;transition:background .15s}
+.gdrive-btn:hover{background:rgba(255,215,0,.1)}
 </style>
 
 <div class="page">
@@ -489,6 +491,12 @@ textarea.fi { resize: vertical; line-height: 1.6; }
                         <p>Drop audio files here or click to browse</p>
                         <span>MP3, WAV, M4A, OGG, FLAC — min 1 min total audio recommended</span>
                     </div>
+                    <div style="text-align:center">
+                      <button type="button" class="gdrive-btn" onclick="gdrivePickForClone()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                        Pick from Google Drive
+                      </button>
+                    </div>
                     <div class="file-list" id="cloneFileList"></div>
                 </div>
                 <button id="cloneBtn" class="btn btn-gold" disabled>
@@ -555,6 +563,12 @@ textarea.fi { resize: vertical; line-height: 1.6; }
                         <div class="dropzone" id="s2sDropzone" style="padding:24px">
                             <input type="file" id="s2sFile" accept="audio/*,video/*">
                             <p style="margin:0;font-size:14px">Drop audio file here or click to browse</p>
+                        </div>
+                        <div style="text-align:center">
+                          <button type="button" class="gdrive-btn" onclick="gdrivePickForS2S()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                            Pick from Google Drive
+                          </button>
                         </div>
                         <div id="s2sFileDisplay" style="display:none;margin-top:10px" class="file-item">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/></svg>
@@ -626,6 +640,12 @@ textarea.fi { resize: vertical; line-height: 1.6; }
                         </div>
                         <p>Drop audio file or click to browse</p>
                         <span>MP3, WAV, M4A, FLAC, OGG supported</span>
+                    </div>
+                    <div style="text-align:center">
+                      <button type="button" class="gdrive-btn" onclick="gdrivePickForIso()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                        Pick from Google Drive
+                      </button>
                     </div>
                     <div id="isoFileDisplay" style="display:none;margin-top:10px" class="file-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/></svg>
@@ -1591,6 +1611,48 @@ function escHtml(str) {
     return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 </script>
+
+<!-- Google Drive Picker -->
+<script>
+    // TODO: replace with your Google Cloud credentials
+    window.GDRIVE_API_KEY   = 'YOUR_GOOGLE_API_KEY';
+    window.GDRIVE_CLIENT_ID = 'YOUR_OAUTH_CLIENT_ID.apps.googleusercontent.com';
+
+    function gdrivePickForClone() {
+        openGDrivePicker({
+            mimeTypes: 'audio/mpeg,audio/wav,audio/ogg,audio/flac,audio/x-m4a,audio/*,video/*',
+            multiple: true,
+            onPick(files) { addCloneFiles(files); }
+        });
+    }
+
+    function gdrivePickForS2S() {
+        openGDrivePicker({
+            mimeTypes: 'audio/*,video/*',
+            onPick(file) {
+                s2sFileData = file;
+                document.getElementById('s2sFileDisplay').style.display = 'flex';
+                document.getElementById('s2sFileName').textContent = file.name;
+                document.getElementById('s2sDropzone').style.display = 'none';
+                updateS2sBtn();
+            }
+        });
+    }
+
+    function gdrivePickForIso() {
+        openGDrivePicker({
+            mimeTypes: 'audio/*,video/*',
+            onPick(file) {
+                isoFileData = file;
+                document.getElementById('isoFileDisplay').style.display = 'flex';
+                document.getElementById('isoFileName').textContent = file.name;
+                document.getElementById('isoDropzone').style.display = 'none';
+                document.getElementById('isoBtn').disabled = false;
+            }
+        });
+    }
+</script>
+<script src="/JS/gdrive-picker.js"></script>
 
     <footer></footer>
     <script src="/JS/sidebar.js"></script>

@@ -321,6 +321,8 @@ body.sidebar-collapsed main{margin-left:80px}
 
 @media(max-width:1024px){:root{--sidebar-w:240px}}
 @media(max-width:768px){:root{--sidebar-w:0px}.page{padding:20px}.grid{grid-template-columns:1fr}.frow{grid-template-columns:1fr}.ph{flex-direction:column;gap:14px}}
+.gdrive-btn{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:5px 12px;font-size:11px;font-family:inherit;background:transparent;border:1px solid rgba(255,215,0,.3);border-radius:5px;color:#FFD700;cursor:pointer;transition:background .15s}
+.gdrive-btn:hover{background:rgba(255,215,0,.1)}
 </style>
 
 <div class="page">
@@ -438,7 +440,12 @@ body.sidebar-collapsed main{margin-left:80px}
 <div class="dzone-icon"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
 <h4>Drop video or photo here or click to browse</h4>
 <p>MP4, MOV, AVI, JPG, PNG, WEBP — max 800 MB</p></div>
-        
+      <div style="text-align:center">
+        <button type="button" class="gdrive-btn" onclick="gdrivePickForUpload()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+          Pick from Google Drive
+        </button>
+      </div>
 
       <!-- Selected file -->
       <div class="sel-file" id="sel-file">
@@ -999,6 +1006,26 @@ document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
 
 init();
 </script>
+
+<!-- Google Drive Picker -->
+<script>
+    // TODO: replace with your Google Cloud credentials
+    window.GDRIVE_API_KEY   = 'YOUR_GOOGLE_API_KEY';
+    window.GDRIVE_CLIENT_ID = 'YOUR_OAUTH_CLIENT_ID.apps.googleusercontent.com';
+
+    function gdrivePickForUpload() {
+        openGDrivePicker({
+            mimeTypes: 'video/mp4,video/quicktime,video/x-msvideo,video/*,image/jpeg,image/png,image/webp,image/gif',
+            onPick(file) {
+                selFile = file;
+                document.getElementById('sf-name').textContent = file.name;
+                document.getElementById('sf-sz').textContent = fmtSz(file.size);
+                document.getElementById('sel-file').classList.add('show');
+            }
+        });
+    }
+</script>
+<script src="/JS/gdrive-picker.js"></script>
     </main>
 
     <footer></footer>

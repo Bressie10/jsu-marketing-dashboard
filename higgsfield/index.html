@@ -667,6 +667,29 @@
                     display: none;
                 }
 
+                .gdrive-btn {
+                    position: absolute;
+                    bottom: 8px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 3px 10px;
+                    font-size: 10px;
+                    font-family: inherit;
+                    background: transparent;
+                    border: 1px solid rgba(255, 215, 0, 0.3);
+                    border-radius: 4px;
+                    color: var(--gold);
+                    cursor: pointer;
+                    z-index: 2;
+                    white-space: nowrap;
+                    transition: background 0.15s;
+                }
+                .gdrive-btn:hover { background: rgba(255, 215, 0, 0.1); }
+                .dropzone.has-file .gdrive-btn { display: none; }
+
                 /* Slider */
                 .slider-row {
                     display: flex;
@@ -1584,6 +1607,10 @@
                                         >
                                             &times;
                                         </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
+                                        </button>
                                     </label>
                                 </div>
                                 <div class="fg">
@@ -1645,6 +1672,10 @@
                                         >
                                             &times;
                                         </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
+                                        </button>
                                     </label>
                                 </div>
                                 <div class="fg">
@@ -1684,6 +1715,10 @@
                                             aria-label="Clear"
                                         >
                                             &times;
+                                        </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
                                         </button>
                                     </label>
                                 </div>
@@ -1753,6 +1788,10 @@
                                             aria-label="Clear"
                                         >
                                             &times;
+                                        </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
                                         </button>
                                     </label>
                                 </div>
@@ -1859,6 +1898,10 @@
                                             aria-label="Clear"
                                         >
                                             &times;
+                                        </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
                                         </button>
                                     </label>
                                 </div>
@@ -1973,6 +2016,10 @@
                                             aria-label="Clear"
                                         >
                                             &times;
+                                        </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
                                         </button>
                                     </label>
                                 </div>
@@ -2257,6 +2304,10 @@
                                         >
                                             &times;
                                         </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
+                                        </button>
                                     </label>
                                 </div>
                                 <div class="fg">
@@ -2336,6 +2387,10 @@
                                             aria-label="Clear"
                                         >
                                             &times;
+                                        </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
                                         </button>
                                     </label>
                                 </div>
@@ -2431,6 +2486,10 @@
                                         >
                                             &times;
                                         </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
+                                        </button>
                                     </label>
                                 </div>
                                 <div class="fg">
@@ -2458,6 +2517,10 @@
                                             aria-label="Clear"
                                         >
                                             &times;
+                                        </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
                                         </button>
                                     </label>
                                 </div>
@@ -2546,6 +2609,10 @@
                                             aria-label="Clear"
                                         >
                                             &times;
+                                        </button>
+                                        <button type="button" class="gdrive-btn" onclick="event.stopPropagation();gdrivePickForDz(this.closest('[data-dz]'))">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                                            Drive
                                         </button>
                                     </label>
                                 </div>
@@ -3851,6 +3918,25 @@
 
             updateFormState("image");
         </script>
+
+        <!-- Google Drive Picker -->
+        <script>
+            // TODO: replace with your Google Cloud credentials
+            // API key: restrict to your domain in Google Cloud Console → Credentials
+            // Client ID: OAuth 2.0 web app — add your Vercel domain to Authorized JS Origins
+            window.GDRIVE_API_KEY  = 'YOUR_GOOGLE_API_KEY';
+            window.GDRIVE_CLIENT_ID = 'YOUR_OAUTH_CLIENT_ID.apps.googleusercontent.com';
+
+            function gdrivePickForDz(dz) {
+                const input = dz.querySelector('input[type=file]');
+                const mimeTypes = input ? input.accept : '';
+                openGDrivePicker({
+                    mimeTypes: mimeTypes || undefined,
+                    onPick(file) { setFile(dz, dz.dataset.dz, file); }
+                });
+            }
+        </script>
+        <script src="/JS/gdrive-picker.js"></script>
         <script src="/JS/sidebar.js"></script>
     </body>
 </html>
